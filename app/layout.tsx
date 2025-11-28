@@ -24,6 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <head>
+        {/* Remix Icon CDN */}
+        <link
+          href='https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css'
+          rel='stylesheet'
+        />
+      </head>
       <body
         className={`${cormorant_Garamond.variable} ${geistMono.variable} antialiased`}
       >

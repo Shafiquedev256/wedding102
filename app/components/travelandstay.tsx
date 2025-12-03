@@ -195,7 +195,7 @@ export default function TravelStay() {
 
             <div className='grid md:grid-cols-4 gap-4'>
               {[
-                "ri-uber-line",
+                "ri-taxi-fill",
                 "ri-car-line",
                 "ri-taxi-fill",
                 "ri-subway-line",

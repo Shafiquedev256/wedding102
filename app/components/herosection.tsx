@@ -25,8 +25,8 @@ export default function Hero() {
     <div className='relative min-h-screen bg-[#FDF8F5] flex flex-col'>
       {/* Navigation */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-white shadow-md" : "bg-transparent"
+        className={` top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled ? "fixed bg-white shadow-md" : "bg-transparent"
         }`}
       >
         <div className='max-w-7xl mx-auto px-6 py-6 flex justify-between items-center'>
@@ -102,23 +102,30 @@ export default function Hero() {
       </nav>
 
       {/* Hero Content */}
-      <div className='flex flex-1 flex-col items-center justify-center px-6 text-center'>
+      <div className='flex flex-1 flex-col  items-center justify-center px-6 text-center'>
         <div className='max-w-4xl w-full space-y-6 md:space-y-8'>
           {/* Subtitle */}
-          <div className='text-[#7D2E3D] font-serif italic text-sm md:text-base tracking-widest'>
+          <div className='text-[#7D2E3D]  font-serif italic text-sm md:text-base tracking-widest'>
             The wedding of
           </div>
 
           {/* Main Heading */}
-          <h1 className=' text-[#7D2E3D] text-6xl md:text-7xl lg:text-8xl leading-tight md:leading-none'>
-            Jemma & Jeﬄe
+          <h1
+            style={{ fontFamily: "Playfair Display, serif" }}
+            className='flex md:flex-row md:space-x-3 flex-col justify-center items-center text-[#7D2E3D] text-6xl md:text-7xl lg:text-8xl leading-tight md:leading-none'
+          >
+            <div>Gemma</div>
+            <div> & </div>
+            <div>Jeﬄe</div>
           </h1>
 
           {/* Invitation Text */}
-          <div className='flex flex-row justify-center gap-4 md:gap-8 text-xs sm:text-sm md:text-base tracking-widest text-gray-600'>
-            <div>YOU</div>
-            <div>ARE</div>
-            <div>INVITED</div>
+          <div className='flex flex-col justify-center items-center'>
+            <div className='flex w-[80%]  flex-row justify-center gap-4 md:gap-8 text-xs sm:text-sm md:text-base tracking-widest text-gray-600'>
+              <div className='w-1/3'>YOU</div>
+              <div className='w-1/3 '>ARE</div>
+              <div className='w-1/3 '>INVITED</div>
+            </div>
           </div>
 
           {/* Description */}
@@ -129,27 +136,32 @@ export default function Hero() {
             designed to capture romance and timeless sophistication.
           </p>
 
-          {/* Date */}
-          <div className='flex items-center justify-center gap-4 md:gap-6 mt-6'>
-            {/* Day */}
-            <div className='w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-white border-2 border-[#7D2E3D] text-lg sm:text-2xl font-light text-[#7D2E3D] rounded-lg shadow-md'>
-              20
+          {/* Image with Date */}
+          <div className='flex flex-col md:flex-row justify-center items-center md:space-x-7 gap-4 mt-6'>
+            {/* Image */}
+            <div className='  sm:w-64  sm:h-48  overflow-hidden '>
+              <Image
+                src='/firstdate.jpg'
+                alt='Wedding'
+                width={200}
+                height={200}
+                className='rounded-lg'
+              />
             </div>
 
-            {/* Heart Separator */}
-            <div className='text-2xl sm:text-3xl text-[#7D2E3D]'>❤️</div>
-
-            {/* Month */}
-            <div className='w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-white border-2 border-[#7D2E3D] text-lg sm:text-2xl font-light text-[#7D2E3D] rounded-lg shadow-md'>
-              DEC
-            </div>
-
-            {/* Heart Separator */}
-            <div className='text-2xl sm:text-3xl text-[#7D2E3D]'>❤️</div>
-
-            {/* Year */}
-            <div className='w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-white border-2 border-[#7D2E3D] text-lg sm:text-2xl font-light text-[#7D2E3D] rounded-lg shadow-md'>
-              2025
+            {/* Date Box */}
+            <div className='flex items-center justify-center gap-2 bg-white border-2 border-[#7D2E3D] rounded-lg shadow-md p-4'>
+              <div className='text-2xl sm:text-3xl font-light text-[#7D2E3D]'>
+                20
+              </div>
+              <div className='text-2xl sm:text-3xl text-[#7D2E3D]'>❤️</div>
+              <div className='text-2xl sm:text-3xl font-light text-[#7D2E3D]'>
+                DEC
+              </div>
+              <div className='text-2xl sm:text-3xl text-[#7D2E3D]'>❤️</div>
+              <div className='text-2xl sm:text-3xl font-light text-[#7D2E3D]'>
+                2025
+              </div>
             </div>
           </div>
         </div>

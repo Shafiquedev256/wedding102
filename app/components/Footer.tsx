@@ -87,7 +87,7 @@ export default function Footer() {
               className='text-2xl mb-6 text-[#7D2E3D]'
               style={{ fontFamily: "Dancing Script, cursive" }}
             >
-              #SophiaAndAlexander2025
+              #GemmaAndJeﬄe2025
             </p>
 
             <div className='flex justify-center md:justify-end gap-4'>
@@ -136,7 +136,7 @@ export default function Footer() {
         <div className='pt-8 border-t border-[#7D2E3D]/20'>
           <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
             <p className='text-xs text-gray-600'>
-              © 2025 Sophia & Alexander. All rights reserved.
+              © 2025 Gemma & Jeﬄe. All rights reserved.
             </p>
 
             <p

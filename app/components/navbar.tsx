@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 interface NavigationProps {
@@ -25,28 +27,42 @@ export default function Navigation({ scrolled }: NavigationProps) {
     >
       <div className='max-w-7xl mx-auto px-6 flex items-center justify-between'>
         {/* Logo */}
-        <button
-          onClick={() => scrollToSection("hero")}
-          className={`font-serif text-2xl transition-colors duration-300 cursor-pointer ${
-            scrolled ? "text-[#3E2723]" : "text-white"
-          }`}
-        >
-          S & A
-        </button>
+        <Link href={"/"}>
+          <Image
+            src='/logo.png'
+            alt='Wedding Logo'
+            width={40}
+            height={40}
+            className='object-contain'
+          />
+        </Link>
 
         {/* Desktop Links */}
         <div className='hidden md:flex items-center gap-12'>
-          {["rsvp", "gallery", "schedule"].map((item) => (
-            <button
-              key={item}
-              onClick={() => scrollToSection(item)}
-              className={`text-sm tracking-[2px] uppercase transition-colors duration-300 cursor-pointer hover:text-[#C17B5C] ${
-                scrolled ? "text-[#3E2723]" : "text-white"
-              }`}
-            >
-              {item}
-            </button>
-          ))}
+          <Link
+            href={"/schedule"}
+            className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+          >
+            SCHEDULE
+          </Link>
+          <Link
+            href={"/travel"}
+            className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+          >
+            TRAVEL & STAY
+          </Link>
+          <Link
+            href={"/contact"}
+            className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+          >
+            CONTACT
+          </Link>
+          <Link
+            href={"/"}
+            className='bg-[#7D2E3D] text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors cursor-pointer'
+          >
+            RSVP
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -74,16 +90,31 @@ export default function Navigation({ scrolled }: NavigationProps) {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className='md:hidden bg-white shadow-md px-6 py-4 flex flex-col gap-4'>
-          {["rsvp", "gallery", "schedule"].map((item) => (
-            <button
-              key={item}
-              onClick={() => scrollToSection(item)}
-              className='text-[#3E2723] uppercase tracking-[2px] text-sm py-2 border-b border-gray-200'
-            >
-              {item}
-            </button>
-          ))}
+        <div className='md:hidden bg-white  px-6 py-4 flex flex-col gap-4'>
+          <Link
+            href={"/schedule"}
+            className='text-[#3E2723] uppercase tracking-[2px] text-sm py-2 border-b border-gray-200'
+          >
+            SCHEDULE
+          </Link>
+          <Link
+            href={"/travel"}
+            className='text-[#3E2723] uppercase tracking-[2px] text-sm py-2 border-b border-gray-200'
+          >
+            TRAVEL & STAY
+          </Link>
+          <Link
+            href={"/contact"}
+            className='text-[#3E2723] uppercase tracking-[2px] text-sm py-2 border-b border-gray-200'
+          >
+            CONTACT
+          </Link>
+          <Link
+            href={"/"}
+            className='bg-[#7D2E3D] text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors cursor-pointer'
+          >
+            RSVP
+          </Link>
         </div>
       )}
     </nav>

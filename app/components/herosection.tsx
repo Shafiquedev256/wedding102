@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,20 +42,24 @@ export default function Hero() {
 
           {/* Desktop Menu */}
           <div className='hidden md:flex gap-8 items-center'>
-            {[
-              ["schedule", "SCHEDULE"],
-              ["travel", "TRAVEL & STAY"],
-              ["faq", "FAQ"],
-              ["contact", "CONTACT"],
-            ].map(([id, label]) => (
-              <button
-                key={id}
-                onClick={() => scrollToSection(id)}
-                className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
-              >
-                {label}
-              </button>
-            ))}
+            <Link
+              href={"/schedule"}
+              className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+            >
+              SCHEDULE
+            </Link>
+            <Link
+              href={"/travel"}
+              className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+            >
+              TRAVEL & STAY
+            </Link>
+            <Link
+              href={"/contact"}
+              className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+            >
+              CONTACT
+            </Link>
             <button
               onClick={() => scrollToSection("rsvp")}
               className='bg-[#7D2E3D] text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors cursor-pointer'

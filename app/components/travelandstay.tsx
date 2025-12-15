@@ -8,18 +8,6 @@ export default function TravelStay() {
       address: "123 Lorimer St, New York, NY 11206",
       icon: "ri-hotel-line",
     },
-    {
-      name: "Hotel",
-      price: "$200-$250/night",
-      address: "123 Lorimer St, New York, NY 11206",
-      icon: "ri-building-line",
-    },
-    {
-      name: "Hotel",
-      price: "$150-$165/night",
-      address: "123 Lorimer St, New York, NY 11206",
-      icon: "ri-home-smile-line",
-    },
   ];
 
   const airports = [
@@ -35,16 +23,10 @@ export default function TravelStay() {
       distance: "30 minutes from venue",
       icon: "ri-flight-takeoff-line",
     },
-    {
-      name: "Newark",
-      fullName: "Newark Liberty International Airport",
-      distance: "1 hour from Brooklyn",
-      icon: "ri-flight-land-line",
-    },
   ];
 
   return (
-    <section id='travel' className='py-24 bg-[#FDF8F5]'>
+    <section id='travel' className='py-24 pt-44 bg-[#FDF8F5]'>
       <div className='max-w-6xl mx-auto px-6'>
         {/* Heading */}
         <div className='text-center mb-16'>
@@ -78,7 +60,7 @@ export default function TravelStay() {
             <h3 className='text-3xl font-serif text-[#7D2E3D]'>Stay</h3>
           </div>
 
-          <div className='bg-white p-8 rounded-lg shadow-md mb-8'>
+          <div className='bg-white p-8 rounded-lg  mb-8'>
             <h4 className='text-xl font-semibold text-gray-800 mb-3'>
               Williamsburg
             </h4>
@@ -88,22 +70,22 @@ export default function TravelStay() {
               area.
             </p>
 
-            <div className='grid md:grid-cols-3 gap-6 mb-8'>
+            <div className='grid md:grid-cols-1 gap-6 mb-8'>
               {hotels.map((hotel, index) => (
                 <div
                   key={`hotel-${index}`}
-                  className='bg-[#FDF8F5] p-6 rounded-lg border-2 border-[#7D2E3D]/10 hover:border-[#7D2E3D]/30 transition-all hover:shadow-lg'
+                  className='bg-[#7D2E3D] p-6 rounded-lg border-2 border-[#7D2E3D]/10 hover:border-[#7D2E3D]/30 transition-all hover:shadow-lg'
                 >
-                  <div className='w-14 h-14 flex items-center justify-center bg-[#7D2E3D] rounded-full mx-auto mb-4'>
-                    <i className={`${hotel.icon} text-2xl text-white`}></i>
+                  <div className='w-14 h-14 flex items-center justify-center bg-[#FDF8F5] rounded-full mx-auto mb-4'>
+                    <i className={`${hotel.icon} text-2xl text-[#7D2E3D]`}></i>
                   </div>
-                  <h5 className='font-semibold text-gray-800 text-center mb-2'>
+                  <h5 className='font-semibold text-[#FDF8F5] text-center mb-2'>
                     {hotel.name}
                   </h5>
-                  <p className='text-[#7D2E3D] font-semibold text-center mb-3'>
+                  <p className='text-[#FDF8F5] font-semibold text-center mb-3'>
                     {hotel.price}
                   </p>
-                  <p className='text-gray-600 text-sm text-center'>
+                  <p className='text-[#FDF8F5] text-sm text-center'>
                     {hotel.address}
                   </p>
                 </div>
@@ -148,32 +130,29 @@ export default function TravelStay() {
 
             <br />
 
-            <div className='grid md:grid-cols-3 gap-6 mb-6'>
+            <div className='grid md:grid-cols-2 gap-6 mb-6'>
               {airports.map((airport, index) => (
                 <div
                   key={`airport-${index}`}
-                  className='bg-[#FDF8F5] p-6 rounded-lg text-center hover:shadow-md transition-shadow'
+                  className='bg-[#7D2E3D]    p-6 rounded-lg text-center hover:shadow-md transition-shadow'
                 >
-                  <div className='w-14 h-14 flex items-center justify-center bg-[#7D2E3D] rounded-full mx-auto mb-4'>
-                    <i className={`${airport.icon} text-2xl text-white`}></i>
+                  <div className='w-14 h-14 flex items-center justify-center bg-[#FDF8F5] rounded-full mx-auto mb-4'>
+                    <i
+                      className={`${airport.icon} text-2xl text-[#7D2E3D]`}
+                    ></i>
                   </div>
-                  <h5 className='font-bold text-[#7D2E3D] text-lg mb-2'>
+                  <h5 className='font-bold text-[#FDF8F5] text-lg mb-2'>
                     {airport.name}
                   </h5>
-                  <p className='text-gray-700 text-sm mb-2'>
+                  <p className='text-[#FDF8F5] text-sm mb-2'>
                     {airport.fullName}
                   </p>
-                  <p className='text-gray-600 text-sm font-semibold'>
+                  <p className='text-[#FDF8F5] text-sm font-semibold'>
                     {airport.distance}
                   </p>
                 </div>
               ))}
             </div>
-
-            <p className='text-gray-700 leading-relaxed'>
-              Newark Liberty International Airport has international flights and
-              is about 1 hour by car from Brooklyn.
-            </p>
           </div>
         </div>
       </div>

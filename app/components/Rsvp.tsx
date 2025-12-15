@@ -94,12 +94,12 @@ export default function RSVPSection() {
   };
 
   return (
-    <section id='rsvp' className='py-24 bg-[#FDF8F5]'>
+    <section id='rsvp' className='py-24  bg-[#7D2E3D]'>
       <div className='max-w-3xl mx-auto px-6'>
         <div className='text-center mb-16'>
-          <h2 className='text-5xl font-serif text-gray-800 mb-4'>RSVP</h2>
+          <h2 className='text-5xl font-serif text-[#FDF8F5] mb-4'>RSVP</h2>
           <div className='w-24 h-1 bg-[#7D2E3D] mx-auto mb-6'></div>
-          <p className='text-gray-600'>
+          <p className='text-[#FDF8F5]'>
             Please respond by October 1st, 2026. We can't wait to celebrate with
             you!
           </p>

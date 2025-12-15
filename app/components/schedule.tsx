@@ -36,7 +36,7 @@ export default function Schedule() {
   ];
 
   return (
-    <section id='schedule' className='py-24 bg-white'>
+    <section id='schedule' className='py-24 mt-6 bg-white'>
       <div className='max-w-6xl mx-auto px-6'>
         {/* Header */}
         <div className='text-center mb-16'>

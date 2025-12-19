@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import Footer from "../components/Footer";
 import Navigation from "../components/navbar";
 import Contact from "../components/contact";
 
@@ -126,18 +125,9 @@ const ContactUsPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </main>
     </>
   );
 };
 
 export default ContactUsPage;
-
-const offices = [
-  {
-    name: "OpenFlow Logistics (Uganda) Ltd",
-    location: "Plot 0001 kampala ",
-    contact: "+256 7000000",
-  },
-];

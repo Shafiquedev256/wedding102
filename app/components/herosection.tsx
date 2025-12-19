@@ -60,12 +60,13 @@ export default function Hero() {
             >
               CONTACT
             </Link>
-            <button
-              onClick={() => scrollToSection("rsvp")}
+
+            <Link
+              href={"/rsvp"}
               className='bg-[#7D2E3D] text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors cursor-pointer'
             >
               RSVP
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Hamburger */}
@@ -82,26 +83,31 @@ export default function Hero() {
           className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-96" : "max-h-0"}`}
         >
           <div className='flex flex-col bg-white border-t border-gray-200 px-6 py-4 gap-4'>
-            {[
-              ["schedule", "SCHEDULE"],
-              ["travel", "TRAVEL & STAY"],
-              ["faq", "FAQ"],
-              ["contact", "CONTACT"],
-            ].map(([id, label]) => (
-              <button
-                key={id}
-                onClick={() => scrollToSection(id)}
-                className='text-sm tracking-wider py-2 text-left hover:text-[#7D2E3D] transition-colors'
-              >
-                {label}
-              </button>
-            ))}
-            <button
-              onClick={() => scrollToSection("rsvp")}
+            <Link
+              href={"/schedule"}
+              className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+            >
+              SCHEDULE
+            </Link>
+            <Link
+              href={"/travel"}
+              className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+            >
+              TRAVEL & STAY
+            </Link>
+            <Link
+              href={"/contact"}
+              className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+            >
+              CONTACT
+            </Link>
+
+            <Link
+              href={"/rsvp"}
               className='bg-[#7D2E3D] text-white px-4 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors mt-2'
             >
               RSVP
-            </button>
+            </Link>
           </div>
         </div>
       </nav>

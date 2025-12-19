@@ -58,7 +58,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
             CONTACT
           </Link>
           <Link
-            href={"/"}
+            href={"/rsvp"}
             className='bg-[#7D2E3D] text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors cursor-pointer'
           >
             RSVP
@@ -110,7 +110,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
             CONTACT
           </Link>
           <Link
-            href={"/"}
+            href={"/rsvp"}
             className='bg-[#7D2E3D] text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors cursor-pointer'
           >
             RSVP

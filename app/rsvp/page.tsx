@@ -1,11 +1,11 @@
 import Navigation from "../components/navbar";
-import TravelStay from "../components/travelandstay";
+import RSVPSection from "../components/Rsvp";
 
 const SchedulePage = () => {
   return (
     <>
       <Navigation scrolled={true} />
-      <TravelStay />
+      <RSVPSection />
     </>
   );
 };

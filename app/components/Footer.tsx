@@ -1,15 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <footer
       id='footer'
@@ -42,37 +36,28 @@ export default function Footer() {
             <ul className='space-y-3'>
               <li>
                 <a
-                  href='/'
+                  href='/travel'
                   className='text-[#7D2E3D] hover:text-gray-800 transition-colors duration-300 text-sm font-light hover:underline cursor-pointer'
                 >
                   Accommodations
                 </a>
               </li>
               <li>
-                <a
-                  href='https://maps.google.com'
-                  target='_blank'
-                  rel='noopener noreferrer'
+                <Link
+                  href='/travel'
                   className='text-[#7D2E3D] hover:text-gray-800 transition-colors duration-300 text-sm font-light hover:underline cursor-pointer'
                 >
                   Travel Info
-                </a>
+                </Link>
               </li>
+
               <li>
-                <a
-                  href='/'
-                  className='text-[#7D2E3D] hover:text-gray-800 transition-colors duration-300 text-sm font-light hover:underline cursor-pointer'
-                >
-                  Gift Registry
-                </a>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("contact")}
+                <Link
+                  href={"/contact"}
                   className='text-[#7D2E3D] hover:text-gray-800 transition-colors duration-300 text-sm font-light hover:underline cursor-pointer'
                 >
                   Contact Us
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -99,26 +84,6 @@ export default function Footer() {
                 className='w-10 h-10 rounded-full border-2 border-[#7D2E3D] flex items-center justify-center text-[#7D2E3D] hover:bg-[#7D2E3D] hover:text-white transition-all duration-300'
               >
                 <i className='ri-instagram-line text-lg'></i>
-              </a>
-
-              {/* Facebook */}
-              <a
-                href='https://facebook.com'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='w-10 h-10 rounded-full border-2 border-[#7D2E3D] flex items-center justify-center text-[#7D2E3D] hover:bg-[#7D2E3D] hover:text-white transition-all duration-300'
-              >
-                <i className='ri-facebook-fill text-lg'></i>
-              </a>
-
-              {/* Pinterest */}
-              <a
-                href='https://pinterest.com'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='w-10 h-10 rounded-full border-2 border-[#7D2E3D] flex items-center justify-center text-[#7D2E3D] hover:bg-[#7D2E3D] hover:text-white transition-all duration-300'
-              >
-                <i className='ri-pinterest-fill text-lg'></i>
               </a>
 
               {/* Email */}

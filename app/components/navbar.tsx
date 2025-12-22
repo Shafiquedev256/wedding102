@@ -11,13 +11,7 @@ interface NavigationProps {
 export default function Navigation({ scrolled }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false); // close menu after clicking
-    }
-  };
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <nav
@@ -27,7 +21,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
     >
       <div className='max-w-7xl mx-auto px-6 flex items-center justify-between'>
         {/* Logo */}
-        <Link href={"/"}>
+        <Link href='/'>
           <Image
             src='/logo.png'
             alt='Wedding Logo'
@@ -40,26 +34,32 @@ export default function Navigation({ scrolled }: NavigationProps) {
         {/* Desktop Links */}
         <div className='hidden md:flex items-center gap-12'>
           <Link
-            href={"/schedule"}
-            className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+            href='/schedule'
+            className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors'
           >
             SCHEDULE
           </Link>
           <Link
-            href={"/travel"}
-            className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+            href='/travel'
+            className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors'
           >
             TRAVEL & STAY
           </Link>
           <Link
-            href={"/contact"}
-            className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors cursor-pointer'
+            href='/faq'
+            className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors'
+          >
+            FAQ
+          </Link>
+          <Link
+            href='/contact'
+            className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors'
           >
             CONTACT
           </Link>
           <Link
-            href={"/rsvp"}
-            className='bg-[#7D2E3D] text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors cursor-pointer'
+            href='/rsvp'
+            className='bg-[#7D2E3D] text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors'
           >
             RSVP
           </Link>
@@ -67,54 +67,72 @@ export default function Navigation({ scrolled }: NavigationProps) {
 
         {/* Mobile Menu Button */}
         <button
+          aria-label='Open menu'
           className='md:hidden flex flex-col gap-[5px]'
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen(true)}
         >
           <span
-            className={`block w-6 h-[2px] transition-all duration-300 ${
-              scrolled ? "bg-[#3E2723]" : "bg-white"
-            }`}
+            className={`block w-6 h-[2px] ${scrolled ? "bg-[#3E2723]" : "bg-white"}`}
           />
           <span
-            className={`block w-6 h-[2px] transition-all duration-300 ${
-              scrolled ? "bg-[#3E2723]" : "bg-white"
-            }`}
+            className={`block w-6 h-[2px] ${scrolled ? "bg-[#3E2723]" : "bg-white"}`}
           />
           <span
-            className={`block w-6 h-[2px] transition-all duration-300 ${
-              scrolled ? "bg-[#3E2723]" : "bg-white"
-            }`}
+            className={`block w-6 h-[2px] ${scrolled ? "bg-[#3E2723]" : "bg-white"}`}
           />
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Fullscreen Menu */}
       {menuOpen && (
-        <div className='md:hidden bg-white  px-6 py-4 flex flex-col gap-4'>
-          <Link
-            href={"/schedule"}
-            className='text-[#3E2723] uppercase tracking-[2px] text-sm py-2 border-b border-gray-200'
+        <div className='md:hidden fixed inset-0 z-50 bg-transparent'>
+          {/* Close Button */}
+          <button
+            aria-label='Close menu'
+            onClick={closeMenu}
+            className='absolute top-6 right-6 text-[48px] leading-none font-light text-[#3E2723] hover:opacity-70 transition'
           >
-            SCHEDULE
-          </Link>
-          <Link
-            href={"/travel"}
-            className='text-[#3E2723] uppercase tracking-[2px] text-sm py-2 border-b border-gray-200'
-          >
-            TRAVEL & STAY
-          </Link>
-          <Link
-            href={"/contact"}
-            className='text-[#3E2723] uppercase tracking-[2px] text-sm py-2 border-b border-gray-200'
-          >
-            CONTACT
-          </Link>
-          <Link
-            href={"/rsvp"}
-            className='bg-[#7D2E3D] text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors cursor-pointer'
-          >
-            RSVP
-          </Link>
+            &times;
+          </button>
+
+          {/* Menu Content */}
+          <div className='flex flex-col justify-center items-center h-full space-y-16 px-6 bg-white'>
+            <Link
+              href='/schedule'
+              onClick={closeMenu}
+              className='text-[#3E2723] uppercase tracking-[2px] text-sm border-b border-gray-200 pb-2'
+            >
+              SCHEDULE
+            </Link>
+            <Link
+              href='/travel'
+              onClick={closeMenu}
+              className='text-[#3E2723] uppercase tracking-[2px] text-sm border-b border-gray-200 pb-2'
+            >
+              TRAVEL & STAY
+            </Link>
+            <Link
+              href='/faq'
+              onClick={closeMenu}
+              className='text-[#3E2723] uppercase tracking-[2px] text-sm border-b border-gray-200 pb-2'
+            >
+              FAQ
+            </Link>
+            <Link
+              href='/contact'
+              onClick={closeMenu}
+              className='text-[#3E2723] uppercase tracking-[2px] text-sm border-b border-gray-200 pb-2'
+            >
+              CONTACT
+            </Link>
+            <Link
+              href='/rsvp'
+              onClick={closeMenu}
+              className='bg-[#7D2E3D] w-60 text-center text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors'
+            >
+              RSVP
+            </Link>
+          </div>
         </div>
       )}
     </nav>

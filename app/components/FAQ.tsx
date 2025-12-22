@@ -8,8 +8,7 @@ export default function FAQSection() {
   const faqs = [
     {
       question: "What is the dress code?",
-      answer:
-        "Semi-formal attire. We suggest cocktail dresses and suits.",
+      answer: "Semi-formal attire. We suggest cocktail dresses and suits.",
     },
     {
       question: "Can I bring a plus one?",
@@ -61,32 +60,32 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-white">
-      <div className="max-w-4xl mx-auto px-6">
+    <section id='faq' className='pt-24 bg-[#7D2E3D]'>
+      <div className='max-w-4xl mx-auto px-6'>
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-serif text-gray-800 mb-4">
+        <div className='text-center my-16'>
+          <h2 className='text-5xl font-serif text-white mb-4'>
             Frequently Asked Questions
           </h2>
-          <div className="w-24 h-1 bg-[#7D2E3D] mx-auto mb-6"></div>
-          <p className="text-gray-600">
+          <div className='w-24 h-1 bg-[#7D2E3D] mx-auto mb-6'></div>
+          <p className='text-gray-200'>
             Everything you need to know about our special day
           </p>
         </div>
 
         {/* FAQ List */}
-        <div className="space-y-4">
+        <div className='space-y-4 py-12'>
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-[#FDF8F5] rounded-lg shadow-md overflow-hidden"
+              className='bg-[#FDF8F5] rounded-lg shadow-md overflow-hidden'
             >
               {/* Question Button */}
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#FDF8F5]/80 transition-colors"
+                className='w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#FDF8F5]/80 transition-colors'
               >
-                <span className="font-semibold text-gray-800 pr-4">
+                <span className='font-semibold text-gray-800 pr-4'>
                   {faq.question}
                 </span>
 
@@ -102,10 +101,8 @@ export default function FAQSection() {
 
               {/* Answer */}
               {openIndex === index && (
-                <div className="px-6 pb-5 animate-fadeIn">
-                  <p className="text-gray-700 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                <div className='px-6 pb-5 animate-fadeIn'>
+                  <p className='text-gray-700 leading-relaxed'>{faq.answer}</p>
                 </div>
               )}
             </div>

@@ -143,7 +143,7 @@ export default function Hero() {
 
           <h1
             style={{ fontFamily: "Playfair Display, serif" }}
-            className='flex justify-center items-center space-x-3 text-[#7D2E3D] text-4xl md:text-7xl lg:text-8xl leading-tight'
+            className='flex justify-center items-center space-x-3 text-[#7D2E3D] text-5xl md:text-7xl lg:text-8xl leading-tight'
           >
             <span>Gemma</span>
             <span>&</span>

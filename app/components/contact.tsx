@@ -2,16 +2,8 @@
 
 export default function Contact() {
   return (
-    <section id='contact' className='py-20 md:py-24  overflow-hidden w-full'>
-      <p className='text-white text-center text-sm sm:text-base'>
-        Have questions? We're here to help!
-      </p>
+    <section id='contact' className=' md:py-24  overflow-hidden w-full'>
       <div className='max-w-6xl mx-auto px-4 sm:px-6'>
-        {/* Section Header */}
-        <div className='text-center mb-14'>
-          <div className='w-20 sm:w-24 h-1 bg-[#7D2E3D] mx-auto mb-6'></div>
-        </div>
-
         <div className='flex flex-col justify-center items-center'>
           {/* Contact Info */}
           <div className='space-y-10'>

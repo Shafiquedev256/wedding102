@@ -1,92 +1,161 @@
-"use client";
-
 export default function Schedule() {
-  const events = [
-    {
-      time: "2:00 PM",
-      title: "Ceremony",
-      description:
-        "Join us as we exchange our vows in the beautiful garden setting",
-      icon: "ri-heart-3-line",
-    },
-    {
-      time: "3:00 PM",
-      title: "Cocktail Hour",
-      description: "Enjoy drinks and hors d'oeuvres while we take photos",
-      icon: "ri-goblet-line",
-    },
-    {
-      time: "4:30 PM",
-      title: "Reception",
-      description: "Dinner, toasts, and celebration begin",
-      icon: "ri-restaurant-line",
-    },
-    {
-      time: "7:00 PM",
-      title: "First Dance",
-      description: "Watch us take our first dance as a married couple",
-      icon: "ri-music-2-line",
-    },
-    {
-      time: "10:00 PM",
-      title: "Grand Finale",
-      description: "Sparkler send-off under the stars",
-      icon: "ri-sparkling-line",
-    },
-  ];
-
   return (
-    <section id='schedule' className='py-24 mt-6 bg-white'>
-      <div className='max-w-6xl mx-auto px-6'>
-        {/* Header */}
-        <div className='text-center mb-16'>
-          <h2 className='text-5xl font-serif text-gray-800 mb-4'>Schedule</h2>
-          <div className='w-24 h-1 bg-[#7D2E3D] mx-auto mb-6'></div>
-          <p className='text-gray-600 mb-8'>
-            December 9th, 2026 • Rosewood Estate Gardens
+    <section
+      id='details'
+      className='py-16 md:py-24 px-4 bg-gradient-to-b w-full overflow-x-hidden from-white to-pink-50'
+    >
+      <div className='max-w-4xl mx-auto'>
+        <div className='text-center mb-12 md:mb-16'>
+          <div className='w-16 h-16 flex items-center justify-center mx-auto mb-6 bg-gradient-to-br from-[#800020] to-[#a0002a] rounded-full shadow-lg'>
+            <i className='ri-calendar-event-line text-white text-3xl'></i>
+          </div>
+          <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 font-serif'>
+            SCHEDULE
+          </h2>
+          <div className='w-24 h-0.5 bg-gradient-to-r from-transparent via-[#800020] to-transparent mx-auto mb-4'></div>
+          <p className='text-base md:text-lg text-gray-600 px-4'>
+            We're so ecstatic to share this special day with you!
           </p>
         </div>
-
         {/* Timeline */}
-        <div className='relative'>
-          {/* Vertical Line */}
-          <div className='absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-[#7D2E3D]/20'></div>
+        <div className='relative max-w-2xl mx-auto mb-16 md:mb-20'>
+          {/* Vertical line */}
+          <div className='absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#800020] via-[#a0002a] to-[#800020]'></div>
 
-          <div className='space-y-12'>
-            {events.map((event, index) => (
-              <div
-                key={`event-${index}`}
-                className={`flex items-center gap-8 ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                }`}
-              >
-                {/* Content */}
-                <div
-                  className={`flex-1 ${
-                    index % 2 === 0 ? "text-right" : "text-left"
-                  }`}
-                >
-                  <div className='bg-[#FDF8F5] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow'>
-                    <div className='text-[#7D2E3D] font-semibold text-lg mb-2'>
-                      {event.time}
-                    </div>
-                    <h3 className='text-2xl font-serif text-gray-800 mb-2'>
-                      {event.title}
-                    </h3>
-                    <p className='text-gray-600 text-sm'>{event.description}</p>
-                  </div>
+          {/* Top circle */}
+          <div className='absolute left-1/2 transform -translate-x-1/2 -top-4 w-4 h-4 bg-white border-3 border-[#800020] rounded-full shadow-md'></div>
+
+          {/* Timeline items */}
+          <div className='space-y-0'>
+            {/* 1:00 PM */}
+            <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
+              <div className='w-1/2 text-right pr-6 md:pr-12'>
+                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
+                  <i className='ri-time-line text-base md:text-lg'></i>
+                  <span className='text-base md:text-xl font-bold'>
+                    1:00 PM
+                  </span>
                 </div>
-
-                {/* Icon */}
-                <div className='w-16 h-16 rounded-full bg-[#7D2E3D] flex items-center justify-center shadow-lg z-10'>
-                  <i className={`${event.icon} text-2xl text-white`}></i>
-                </div>
-
-                {/* Spacer */}
-                <div className='flex-1'></div>
               </div>
-            ))}
+              <div className='w-1/2 pl-6 md:pl-12'>
+                <div className='flex items-center gap-2 md:gap-3'>
+                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
+                    <i className='ri-heart-line text-[#800020] text-base md:text-lg'></i>
+                  </div>
+                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                    Ceremony Begins
+                  </span>
+                </div>
+              </div>
+            </div>
+            {/* 2:45 PM */}
+            <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
+              <div className='w-1/2 text-right pr-6 md:pr-12'>
+                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
+                  <i className='ri-time-line text-base md:text-lg'></i>
+                  <span className='text-base md:text-xl font-bold'>
+                    2:45 PM
+                  </span>
+                </div>
+              </div>
+              <div className='w-1/2 pl-6 md:pl-12'>
+                <div className='flex items-center gap-2 md:gap-3'>
+                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
+                    <i className='ri-goblet-line text-[#800020] text-base md:text-lg'></i>
+                  </div>
+                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                    Reception
+                  </span>
+                </div>
+              </div>
+            </div>
+            {/* 3:00 PM */}
+            <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
+              <div className='w-1/2 text-right pr-6 md:pr-12'>
+                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
+                  <i className='ri-time-line text-base md:text-lg'></i>
+                  <span className='text-base md:text-xl font-bold'>
+                    3:00 PM
+                  </span>
+                </div>
+              </div>
+              <div className='w-1/2 pl-6 md:pl-12'>
+                <div className='flex items-center gap-2 md:gap-3'>
+                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
+                    <i className='ri-music-2-line text-[#800020] text-base md:text-lg'></i>
+                  </div>
+                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                    First Dance
+                  </span>
+                </div>
+              </div>
+            </div>
+            {/* 3:15 PM */}
+            <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
+              <div className='w-1/2 text-right pr-6 md:pr-12'>
+                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
+                  <i className='ri-time-line text-base md:text-lg'></i>
+                  <span className='text-base md:text-xl font-bold'>
+                    3:15 PM
+                  </span>
+                </div>
+              </div>
+              <div className='w-1/2 pl-6 md:pl-12'>
+                <div className='flex items-center gap-2 md:gap-3'>
+                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
+                    <i className='ri-restaurant-line text-[#800020] text-base md:text-lg'></i>
+                  </div>
+                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                    Dinner is served
+                  </span>
+                </div>
+              </div>
+            </div>
+            {/* 4:00 PM */}
+            <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
+              <div className='w-1/2 text-right pr-6 md:pr-12'>
+                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
+                  <i className='ri-time-line text-base md:text-lg'></i>
+                  <span className='text-base md:text-xl font-bold'>
+                    4:00 PM
+                  </span>
+                </div>
+              </div>
+              <div className='w-1/2 pl-6 md:pl-12'>
+                <div className='flex items-center gap-2 md:gap-3'>
+                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
+                    <i className='ri-champagne-line text-[#800020] text-base md:text-lg'></i>
+                  </div>
+                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                    Toasts
+                  </span>
+                </div>
+              </div>
+            </div>
+            {/* 5:25 PM */}
+            <div className='relative flex items-center justify-between py-6 md:py-8'>
+              <div className='w-1/2 text-right pr-6 md:pr-12'>
+                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
+                  <i className='ri-time-line text-base md:text-lg'></i>
+                  <span className='text-base md:text-xl font-bold'>
+                    5:25 PM
+                  </span>
+                </div>
+              </div>
+              <div className='w-1/2 pl-6 md:pl-12'>
+                <div className='flex items-center gap-2 md:gap-3'>
+                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
+                    <i className='ri-disco-ball-line text-[#800020] text-base md:text-lg'></i>
+                  </div>
+                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                    Party Time!!
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
+          {/* Bottom circle */}
+          <div className='absolute left-1/2 transform -translate-x-1/2 -bottom-4 w-4 h-4 bg-white border-3 border-[#800020] rounded-full shadow-md'></div>
         </div>
       </div>
     </section>

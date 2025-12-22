@@ -32,19 +32,30 @@ const ContactUsPage: React.FC = () => {
 
   return (
     <>
-      <main className=' bg-[#7D2E3D] overflow-hidden w-full'>
+      <main className=' bg-[#FDF8F5] py-20 md:py-24 overflow-hidden w-full'>
         <Navigation scrolled={true} />
         <div className=' mt-12'>
-          <div className='  mb-10'>
-            <div className='flex flex-col md:flex-row-reverse items-center py-6 justify-evenly bg-main-100'>
+          <div className='  '>
+            <div className='text-center mb-12'>
+              <h2 className='text-4xl mb-3 md:text-5xl font-bold text-gray-800 font-serif'>
+                Get In Touch
+              </h2>
+              <div className='w-24 h-0.5 bg-[#7D2E3D] mx-auto mb-2'></div>
+              <p className='md:text-lg px-4 text-gray-500 max-w-2xl mx-auto'>
+                Have questions? We'd love to hear from you. Send us a message
+                and we'll respond as soon as possible.
+              </p>
+            </div>
+            <div className='flex flex-col md:flex-row-reverse items-center pb-6 justify-evenly bg-main-100'>
               {/* Office Location Section */}
+
               <section className='mb-8 text-white'>
                 <Contact />
               </section>
 
               {/* Message Form Section */}
               <section className='w-full p-4 md:w-2/4'>
-                <h2 className='text-2xl font-semibold text-white mb-4'>
+                <h2 className='text-2xl font-semibold text-gray-600 mb-4'>
                   Send Us a Message
                 </h2>
                 <form onSubmit={handleSubmit} className='space-y-4'>
@@ -63,7 +74,7 @@ const ContactUsPage: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className='mt-1 block w-full p-3 border border-white bg-[#FDF8F5] rounded-md 
+                      className='mt-1 block w-full p-3  border-[#7D2E3D] border bg-white rounded-md 
                      focus:outline-none focus:ring-blue-500 focus:border-blue-500'
                     />
                   </div>
@@ -83,7 +94,7 @@ const ContactUsPage: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className='mt-1 block w-full p-3 border border-white bg-[#FDF8F5] rounded-md 
+                      className='mt-1 block w-full p-3 border border-[#7D2E3D] border-[1px] bg-white rounded-md 
                      focus:outline-none focus:ring-blue-500 focus:border-blue-500'
                     />
                   </div>
@@ -103,7 +114,7 @@ const ContactUsPage: React.FC = () => {
                       onChange={handleChange}
                       required
                       rows={4}
-                      className='mt-1 block w-full p-3 border border-white bg-[#FDF8F5] rounded-md 
+                      className='mt-1 block w-full p-3 border border-[#7D2E3D] border-[1px] bg-white rounded-md 
                      focus:outline-none focus:ring-blue-500 focus:border-blue-500'
                     ></textarea>
                   </div>

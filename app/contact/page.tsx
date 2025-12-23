@@ -32,7 +32,7 @@ const ContactUsPage: React.FC = () => {
 
   return (
     <>
-      <main className=' bg-[#FDF8F5] py-20 md:py-24 overflow-hidden w-full'>
+      <main className=' bg-[#FDF8F5] min-h-screen py-20 md:py-24 overflow-hidden w-full'>
         <Navigation scrolled={true} />
         <div className=' mt-12'>
           <div className='  '>
@@ -46,12 +46,8 @@ const ContactUsPage: React.FC = () => {
                 and we'll respond as soon as possible.
               </p>
             </div>
-            <div className='flex flex-col md:flex-row-reverse items-center pb-6 justify-evenly bg-main-100'>
+            <div className='flex justify-center items-center pb-6  bg-main-100'>
               {/* Office Location Section */}
-
-              <section className='mb-8 text-white'>
-                <Contact />
-              </section>
 
               {/* Message Form Section */}
               <section className='w-full p-4 md:w-2/4'>

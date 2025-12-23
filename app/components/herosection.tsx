@@ -161,7 +161,11 @@ export default function Hero() {
             elegance, carefully composed with the finest floral notes and
             complemented by warm, luxurious undertones.
           </p>
-
+          <div className='flex flex-row space-x-3 text-gray-800 justify-center items-center'>
+            <div className='text-center'>12 . 06 . 2026 </div>
+            <span>|</span>
+            <div>BELL RECO, ARGENTONA</div>
+          </div>
           <Link
             href='/rsvp'
             className='inline-block bg-[#7D2E3D] text-white px-8 py-3 rounded text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors'

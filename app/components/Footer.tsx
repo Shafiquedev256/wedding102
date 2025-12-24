@@ -9,15 +9,8 @@ export default function Footer() {
       <div className='max-w-7xl mx-auto'>
         <div className='py-8'>
           <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
-            <p className='text-xs text-gray-600'>
+            <p className='text-xs text-center w-full text-gray-600'>
               © 2025 Gemma & Jeﬄe. All rights reserved.
-            </p>
-
-            <p
-              className='text-sm text-[#7D2E3D]'
-              style={{ fontFamily: "Dancing Script, cursive" }}
-            >
-              Made with ♡
             </p>
           </div>
         </div>

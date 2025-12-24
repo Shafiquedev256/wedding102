@@ -70,7 +70,7 @@ const ContactUsPage: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className='mt-1 block w-full p-3  border-[#7D2E3D] border bg-white rounded-md 
+                      className='mt-1 block w-full p-3  border-gray-300 border bg-white rounded-md 
                      focus:outline-none focus:ring-blue-500 focus:border-blue-500'
                     />
                   </div>
@@ -90,7 +90,7 @@ const ContactUsPage: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className='mt-1 block w-full p-3 border border-[#7D2E3D] border-[1px] bg-white rounded-md 
+                      className='mt-1 block w-full p-3 border border-gray-300 border-[1px] bg-white rounded-md 
                      focus:outline-none focus:ring-blue-500 focus:border-blue-500'
                     />
                   </div>
@@ -110,14 +110,14 @@ const ContactUsPage: React.FC = () => {
                       onChange={handleChange}
                       required
                       rows={4}
-                      className='mt-1 block w-full p-3 border border-[#7D2E3D] border-[1px] bg-white rounded-md 
+                      className='mt-1 block w-full p-3 border border-gray-300 border-[1px] bg-white rounded-md 
                      focus:outline-none focus:ring-blue-500 focus:border-blue-500'
                     ></textarea>
                   </div>
 
                   <button
                     type='submit'
-                    className='w-full bg-yellow-500 text-main-100  py-3 rounded-md font-semibold hover:bg-yellow-700 transition'
+                    className='w-full bg-[#7D2E3D] text-white text-main-100  py-3 rounded-md font-semibold hover:bg-[#c52240] transition'
                   >
                     Send Message
                   </button>

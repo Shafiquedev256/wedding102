@@ -17,7 +17,7 @@ export default function Hero() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className='relative min-h-screen bg-[#FDF8F5] flex flex-col'>
+    <div className='relative min-h-[90vh] md:h-screen bg-[#FDF8F5] flex flex-col'>
       {/* Navigation */}
       <nav
         className={`top-0 left-0 right-0 z-50 transition-all duration-300 ${

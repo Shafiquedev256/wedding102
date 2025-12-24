@@ -94,19 +94,19 @@ export default function RSVPSection() {
   };
 
   return (
-    <section id='rsvp' className='py-24  bg-[#7D2E3D]'>
+    <section id='rsvp' className='py-24  bg-[#FDF8F5]'>
       <div className='max-w-3xl mx-auto px-6'>
         <div className='text-center mb-16'>
-          <h2 className='text-5xl font-serif text-[#FDF8F5] mb-4'>RSVP</h2>
+          <h2 className='text-5xl font-serif text-gray-800 my-4'>RSVP</h2>
           <div className='w-24 h-1 bg-[#7D2E3D] mx-auto mb-6'></div>
-          <p className='text-[#FDF8F5]'>
+          <p className='text-gray-700'>
             Please respond by October 1st, 2026. We can't wait to celebrate with
             you!
           </p>
         </div>
 
         <form
-          className='bg-white rounded-lg shadow-lg p-8'
+          className='bg-[#FDF8F5] rounded-lg shadow-xl p-8'
           onSubmit={handleSubmit}
         >
           <div className='space-y-6'>
@@ -122,7 +122,7 @@ export default function RSVPSection() {
                 id='name'
                 name='name'
                 required
-                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] text-sm'
+                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] bg-white text-sm'
                 placeholder='Enter your full name'
               />
             </div>
@@ -140,7 +140,7 @@ export default function RSVPSection() {
                 name='email'
                 type='email'
                 required
-                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] text-sm'
+                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] bg-white text-sm'
                 placeholder='your.email@example.com'
               />
             </div>
@@ -158,7 +158,7 @@ export default function RSVPSection() {
                 name='phone'
                 type='tel'
                 required
-                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] text-sm'
+                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] bg-white text-sm'
                 placeholder='+1 (555) 123-4567'
               />
             </div>
@@ -177,7 +177,7 @@ export default function RSVPSection() {
                 value={totalGuests}
                 onChange={handleTotalGuestsChange}
                 required
-                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] text-sm cursor-pointer'
+                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] bg-white text-sm cursor-pointer'
               >
                 {Array.from({ length: 10 }, (_, i) => (
                   <option key={i} value={i + 1}>
@@ -198,7 +198,7 @@ export default function RSVPSection() {
                   value={name}
                   onChange={(e) => handleGuestChange(idx, e.target.value)}
                   required
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] text-sm mb-2'
+                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] bg-white text-sm mb-2'
                   placeholder={`Guest ${idx + 1} full name`}
                 />
               ))}
@@ -218,7 +218,7 @@ export default function RSVPSection() {
                 rows={4}
                 maxLength={500}
                 onChange={handleTextareaChange}
-                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] text-sm resize-none'
+                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] bg-white text-sm resize-none'
                 placeholder='Please let us know about any dietary restrictions, allergies, or special requests (max 500 characters)'
               />
               <div className='text-xs text-gray-500 mt-1'>
@@ -227,15 +227,31 @@ export default function RSVPSection() {
             </div>
 
             {/* Shuttle Bus */}
-            <div className='bg-[#FDF8F5] p-6 rounded-lg'>
+            <div className=' py-6 rounded-lg'>
               <div className='flex items-start gap-3'>
-                <input
-                  id='needs_bus'
-                  name='needs_bus'
-                  type='checkbox'
-                  value='yes'
-                  className='mt-1 w-5 h-5 text-[#7D2E3D] border-gray-300 rounded focus:ring-[#7D2E3D] cursor-pointer'
-                />
+                <div className='flex flex-col space-y-2 justify-center'>
+                  <div className='flex flex-row space-x-2 items-center'>
+                    <span className='text-sm'>Yes</span>
+                    <input
+                      id='needs_bus'
+                      name='needs_bus'
+                      type='checkbox'
+                      value='Yes'
+                      className='mt-1 w-5 h-5 text-[#7D2E3D] border-gray-300 rounded focus:ring-[#7D2E3D] cursor-pointer'
+                    />
+                  </div>
+                  <div className='flex flex-row space-x-3 items-center'>
+                    <span className='text-sm'>No</span>
+                    <input
+                      id='needs_bus'
+                      name='needs_bus'
+                      type='checkbox'
+                      value='No'
+                      className='mt-1 w-5 h-5 text-[#7D2E3D] border-gray-300 rounded focus:ring-[#7D2E3D] cursor-pointer'
+                    />
+                  </div>
+                </div>
+
                 <div>
                   <label
                     htmlFor='needs_bus'

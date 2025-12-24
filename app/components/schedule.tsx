@@ -2,13 +2,10 @@ export default function Schedule() {
   return (
     <section
       id='details'
-      className='py-16 md:py-24 px-4 bg-gradient-to-b w-full overflow-x-hidden from-white to-pink-50'
+      className='pt-24 min-h-screen md:py-24 px-4 bg-gradient-to-b w-full overflow-x-hidden from-white to-pink-50'
     >
       <div className='max-w-4xl mx-auto'>
         <div className='text-center mt-14 mb-12 md:mb-16'>
-          <div className='w-16 h-16 flex items-center justify-center mx-auto mb-6 bg-gradient-to-br from-[#800020] to-[#a0002a] rounded-full shadow-lg'>
-            <i className='ri-calendar-event-line text-white text-3xl'></i>
-          </div>
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 font-serif'>
             SCHEDULE
           </h2>
@@ -30,17 +27,13 @@ export default function Schedule() {
             {/* 1:00 PM */}
             <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
-                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
-                  <i className='ri-time-line text-base md:text-lg'></i>
-                  <span className='text-base md:text-xl font-bold'>17:00</span>
+                <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
+                  <span className='text-base   '>1:00 PM</span>
                 </div>
               </div>
               <div className='w-1/2 pl-6 md:pl-12'>
                 <div className='flex items-center gap-2 md:gap-3'>
-                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
-                    <i className='ri-heart-line text-[#800020] text-base md:text-lg'></i>
-                  </div>
-                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                  <span className='text-sm md:text-lg text-black font-medium'>
                     Ceremony Begins
                   </span>
                 </div>
@@ -49,17 +42,13 @@ export default function Schedule() {
             {/* 2:45 PM */}
             <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
-                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
-                  <i className='ri-time-line text-base md:text-lg'></i>
-                  <span className='text-base md:text-xl font-bold'>18:00</span>
+                <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
+                  <span className='text-base   '>2:00 PM</span>
                 </div>
               </div>
               <div className='w-1/2 pl-6 md:pl-12'>
                 <div className='flex items-center gap-2 md:gap-3'>
-                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
-                    <i className='ri-goblet-line text-[#800020] text-base md:text-lg'></i>
-                  </div>
-                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                  <span className='text-sm md:text-lg text-black font-medium'>
                     Reception
                   </span>
                 </div>
@@ -68,19 +57,13 @@ export default function Schedule() {
             {/* 3:00 PM */}
             <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
-                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
-                  <i className='ri-time-line text-base md:text-lg'></i>
-                  <span className='text-base md:text-xl font-bold'>
-                    3:00 PM
-                  </span>
+                <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
+                  <span className='text-base   '>3:00 PM</span>
                 </div>
               </div>
               <div className='w-1/2 pl-6 md:pl-12'>
                 <div className='flex items-center gap-2 md:gap-3'>
-                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
-                    <i className='ri-music-2-line text-[#800020] text-base md:text-lg'></i>
-                  </div>
-                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                  <span className='text-sm md:text-lg text-black font-medium'>
                     First Dance
                   </span>
                 </div>
@@ -89,19 +72,13 @@ export default function Schedule() {
             {/* 3:15 PM */}
             <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
-                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
-                  <i className='ri-time-line text-base md:text-lg'></i>
-                  <span className='text-base md:text-xl font-bold'>
-                    3:15 PM
-                  </span>
+                <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
+                  <span className='text-base   '>3:15 PM</span>
                 </div>
               </div>
               <div className='w-1/2 pl-6 md:pl-12'>
                 <div className='flex items-center gap-2 md:gap-3'>
-                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
-                    <i className='ri-restaurant-line text-[#800020] text-base md:text-lg'></i>
-                  </div>
-                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                  <span className='text-sm md:text-lg text-black font-medium'>
                     Dinner is served
                   </span>
                 </div>
@@ -110,19 +87,13 @@ export default function Schedule() {
             {/* 4:00 PM */}
             <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
-                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
-                  <i className='ri-time-line text-base md:text-lg'></i>
-                  <span className='text-base md:text-xl font-bold'>
-                    4:00 PM
-                  </span>
+                <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
+                  <span className='text-base   '>4:00 PM</span>
                 </div>
               </div>
               <div className='w-1/2 pl-6 md:pl-12'>
                 <div className='flex items-center gap-2 md:gap-3'>
-                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
-                    <i className='ri-goblet-2-line text-[#800020] text-base md:text-lg'></i>{" "}
-                  </div>
-                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                  <span className='text-sm md:text-lg text-black font-medium'>
                     Toasts
                   </span>
                 </div>
@@ -131,19 +102,13 @@ export default function Schedule() {
             {/* 5:25 PM */}
             <div className='relative flex items-center justify-between py-6 md:py-8'>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
-                <div className='inline-flex items-center gap-2 bg-gradient-to-r from-[#800020] to-[#a0002a] text-white px-3 md:px-4 py-2 rounded-full shadow-md'>
-                  <i className='ri-time-line text-base md:text-lg'></i>
-                  <span className='text-base md:text-xl font-bold'>
-                    5:25 PM
-                  </span>
+                <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
+                  <span className='text-base   '>5:25 PM</span>
                 </div>
               </div>
               <div className='w-1/2 pl-6 md:pl-12'>
                 <div className='flex items-center gap-2 md:gap-3'>
-                  <div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-pink-100 rounded-full flex-shrink-0'>
-                    <i className='ri-music-2-line text-[#800020] text-base md:text-lg'></i>{" "}
-                  </div>
-                  <span className='text-sm md:text-lg text-gray-700 font-medium'>
+                  <span className='text-sm md:text-lg text-black font-medium'>
                     Party Time!!
                   </span>
                 </div>

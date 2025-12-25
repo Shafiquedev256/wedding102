@@ -155,16 +155,10 @@ export default function Hero() {
             <span>ARE</span>
             <span>INVITED</span>
           </div>
-
-          <p className='text-sm md:text-base leading-relaxed text-gray-700 max-w-2xl mx-auto'>
-            Each Blume perfume tells a story of love, beauty, and nature's
-            elegance, carefully composed with the finest floral notes and
-            complemented by warm, luxurious undertones.
-          </p>
           <div className='flex flex-row space-x-3 text-gray-800 justify-center items-center'>
             <div className='text-center'>12 . 06 . 2026 </div>
             <span>|</span>
-            <div>BELL RECO, ARGENTONA</div>
+            <div>BELL RECO, SPAIN</div>
           </div>
           <Link
             href='/rsvp'

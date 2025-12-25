@@ -65,7 +65,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-20 px-2 md:px-6 bg-[#FDF8F5]">
+    <section id="faq" className="py-20 px-2 md:px-6 bg-[#FDF8F5] min-h-screen ">
       <div className="px-3 md:max-w-3xl md:mx-auto">
         <div className=" rounded-2xl   md:p-12">
           <h2 className="text-lg md:text-4xl font-serif text-gray-900 mb-6 md:mb-12 pt-20 text-center">
@@ -75,7 +75,7 @@ export default function FAQSection() {
           <br />
 
           {/* Gift Information */}
-          <div className="mb-12 text-center px-4">
+          <div className="mb-12 text-center px-2">
             <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
               Your presence at our wedding is the greatest gift of all. However,
               if you wish to honor us with a gift, we have registered at select

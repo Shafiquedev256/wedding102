@@ -1,3 +1,4 @@
+"use client" 
 import {useState, useEffect} from "react" 
 import FAQSection from "../components/FAQ";
 import Navigation from "../components/navbar";

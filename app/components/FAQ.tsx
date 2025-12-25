@@ -67,7 +67,7 @@ export default function FAQSection() {
   return (
     <section id="faq" className="py-20 px-6 bg-[#FDF8F5]">
       <div className="px-3 md:max-w-3xl md:mx-auto">
-        <div className=" rounded-2xl shadow-sm p-8 md:p-12">
+        <div className=" rounded-2xl   md:p-12">
           <h2 className="text-lg md:text-4xl font-serif text-gray-900 mb-6 md:mb-12 pt-20 text-center">
             Your Questions Answered
           </h2>
@@ -89,7 +89,7 @@ export default function FAQSection() {
             </p>
           </div>
 
-          <div className="space-y-4 shadow-xl">
+          <div className="space-y-4 shadow-xl p-4 rounded ">
             {faqs.map((faq, index) => (
               <div
                 key={index}

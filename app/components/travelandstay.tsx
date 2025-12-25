@@ -33,7 +33,7 @@ export default function TravelStay() {
         {/* Stay Section */}
         <div className='mb-16 max-w-3xl mx-auto'>
           <div className='flex items-center gap-3 mb-8'>
-            <h3 className='text-3xl font-serif text-[#7D2E3D]'>Stay</h3>
+            <h3 className='text-3xl text-center md:text-left font-serif text-[#7D2E3D]'>Stay</h3>
           </div>
 
           <div className=' md:p-8 rounded-lg  mb-8'>
@@ -85,7 +85,7 @@ export default function TravelStay() {
         {/* Getting There */}
         <div className='max-w-3xl mx-auto'>
           <div className='flex items-center gap-3 mb-8'>
-            <h3 className='text-3xl font-serif text-[#7D2E3D]'>Driving</h3>
+            <h3 className='text-3xl font-serif text-center md:text-left text-[#7D2E3D]'>Driving</h3>
           </div>
           {/** Driving  */}
 
@@ -124,7 +124,7 @@ export default function TravelStay() {
           </div>
           {/* Flying */}
           <div className='flex items-center gap-3 my-8'>
-            <h3 className='text-3xl font-serif text-[#7D2E3D]'>Flying</h3>
+            <h3 className='text-3xl font-serif text-[#7D2E3D] text-center md:text-left '>Flying</h3>
           </div>
           <div className='flex flex-col justify-center items-center '>
             <p className='text-lg text-gray-700 mb-8 text-center md:text-left'></p>

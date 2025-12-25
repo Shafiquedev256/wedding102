@@ -66,9 +66,9 @@ export default function FAQSection() {
 
   return (
     <section id="faq" className="py-20 px-6 bg-[#FDF8F5]">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12">
-          <h2 className="text-4xl font-serif text-gray-900 mb-12 pt-20 text-center">
+      <div className="px-3 md:max-w-3xl md:mx-auto">
+        <div className=" rounded-2xl shadow-sm p-8 md:p-12">
+          <h2 className="text-lg md:text-4xl font-serif text-gray-900 mb-6 md:mb-12 pt-20 text-center">
             Your Questions Answered
           </h2>
 
@@ -89,7 +89,7 @@ export default function FAQSection() {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 shadow-xl">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -103,7 +103,7 @@ export default function FAQSection() {
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex items-center justify-between p-6 text-left hover:bg-[#FDF8F5]/80 transition-colors cursor-pointer"
                 >
-                  <span className="text-lg font-medium text-gray-900 pr-4">
+                  <span className="md:text-lg font-medium text-gray-900 pr-4">
                     {faq.question}
                   </span>
                   <i

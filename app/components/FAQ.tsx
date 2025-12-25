@@ -65,9 +65,9 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="bg-[#FDF8F5] py-20 px-4 md:px-6">
+    <section id="faq" className="bg-[#FDF8F5] py-20  px-4 md:px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-8 text-center">
+        <h2 className="text-3xl md:text-4xl pt-20 font-serif text-gray-900 mb-8 text-center">
           Your Questions Answered
         </h2>
 
@@ -89,14 +89,14 @@ export default function FAQSection() {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-3 shadow-lg rounded-lg overflow-hidden bg-white">
+        <div className="space-y-3 shadow-lg rounded-lg overflow-hidden ">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (
               <div
                 key={index}
-                className="overflow-hidden border-b last:border-b-0"
+                className="overflow-hidden"
               >
                 <button
                   type="button"
@@ -119,7 +119,7 @@ export default function FAQSection() {
                     isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-4 md:px-6 pb-5 text-gray-700 leading-relaxed text-sm md:text-base">
+                  <div className="px-4 md:px-6 pb-5 text-gray-700 leading-relaxed text-sm md:text-base bg-white rounded">
                     {faq.answer}
                   </div>
                 </div>

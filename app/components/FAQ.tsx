@@ -2,10 +2,15 @@
 
 import { useState } from "react";
 
+type FAQ = {
+  question: string;
+  answer: string;
+};
+
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const faqs = [
+  const faqs: FAQ[] = [
     {
       question: "What is the dress code?",
       answer: "Semi-formal attire. We suggest cocktail dresses and suits.",
@@ -56,59 +61,74 @@ export default function FAQSection() {
   ];
 
   const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
-    <section id='faq' className='pt-24 bg-[#7D2E3D]'>
-      <div className='max-w-4xl mx-auto px-6'>
-        {/* Header */}
-        <div className='text-center my-16'>
-          <h2 className='text-5xl font-serif text-white mb-4'>
-            Frequently Asked Questions
-          </h2>
-          <div className='w-24 h-1 bg-[#7D2E3D] mx-auto mb-6'></div>
-          <p className='text-gray-200'>
-            Everything you need to know about our special day
+    <section id="faq" className="bg-[#FDF8F5] py-20 px-4 md:px-6">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-8 text-center">
+          Your Questions Answered
+        </h2>
+
+        <br />
+
+        {/* Gift Information */}
+        <div className="mb-12 text-center px-4">
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+            Your presence at our wedding is the greatest gift of all. However, if
+            you wish to honor us with a gift, we have registered at select stores
+            for your convenience.
+          </p>
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+            For those who prefer to give monetary gifts, we have set up a
+            honeymoon fund. You can also send gifts directly to our registry or
+            bring cards to the reception. We are grateful for your love and
+            generosity.
           </p>
         </div>
 
-        {/* FAQ List */}
-        <div className='space-y-4 py-12'>
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className='bg-[#FDF8F5] rounded-lg shadow-md overflow-hidden'
-            >
-              {/* Question Button */}
-              <button
-                onClick={() => toggleFAQ(index)}
-                className='w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#FDF8F5]/80 transition-colors'
+        {/* FAQ Accordion */}
+        <div className="space-y-3 shadow-lg rounded-lg overflow-hidden bg-white">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+
+            return (
+              <div
+                key={index}
+                className="overflow-hidden border-b last:border-b-0"
               >
-                <span className='font-semibold text-gray-800 pr-4'>
-                  {faq.question}
-                </span>
+                <button
+                  type="button"
+                  onClick={() => toggleFAQ(index)}
+                  aria-expanded={isOpen}
+                  className="w-full flex items-center justify-between py-5 px-4 md:px-6 text-left hover:opacity-80 transition-opacity"
+                >
+                  <span className="text-base md:text-lg font-medium text-gray-900 pr-4">
+                    {faq.question}
+                  </span>
+                  <i
+                    className={`ri-arrow-down-s-line text-2xl text-gray-600 transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
 
-                {/* Arrow Icon */}
-                <i
-                  className={`text-2xl text-[#7D2E3D] transition-transform ${
-                    openIndex === index
-                      ? "ri-arrow-up-s-line"
-                      : "ri-arrow-down-s-line"
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
-                />
-              </button>
-
-              {/* Answer */}
-              {openIndex === index && (
-                <div className='px-6 pb-5 animate-fadeIn'>
-                  <p className='text-gray-700 leading-relaxed'>{faq.answer}</p>
+                >
+                  <div className="px-4 md:px-6 pb-5 text-gray-700 leading-relaxed text-sm md:text-base">
+                    {faq.answer}
+                  </div>
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+

@@ -81,7 +81,8 @@ export default function TravelStay() {
         <div className="bg-[#FDF8F5] backdrop-blur-sm max-w-3xl mx-auto rounded-2xl  shadow-lg mb-16">
           <div className="grid md:grid-cols-2 gap-6">
             {/* Left side - Driving Image */}
-            <div className="relative overflow-hidden rounded-xl w-full h-full min-h-[300px]">
+            <div className="relative overflow-hidden rounded-tl-xl rounded-bl-xl w-full h-full min-h-[300px]">
+
               <img
                 src="https://readdy.ai/api/search-image?query=scenic highway road leading to new york city skyline in distance beautiful clear day professional travel photography clean composition showing urban driving route with modern cars and clear road signs&width=600&height=400&seq=driving001&orientation=landscape"
                 alt="Driving to venue"
@@ -152,7 +153,7 @@ export default function TravelStay() {
         {/* Flying */}
         <div className="bg-[#FDF8F5] backdrop-blur-sm rounded-2xl  max-w-3xl mx-auto  shadow-lg">
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="relative overflow-hidden rounded-xl w-full h-full min-h-[300px]">
+            <div className="relative overflow-hidden rounded-tl-xl rounded-bl-xl w-full h-full min-h-[300px]">
               <img
                 src="https://readdy.ai/api/search-image?query=modern airport terminal interior with large windows showing airplanes on tarmac bright natural lighting clean professional travel photography simple composition showcasing aviation and travel atmosphere&width=600&height=400&seq=airport001&orientation=landscape"
                 alt="Airport"

@@ -95,7 +95,7 @@ export default function FAQSection() {
                 key={index}
                 className={`bg-[#FDF8F5] rounded-xl overflow-hidden transition-all duration-300 ${
                   openIndex === index
-                    ? "border-l-4 border-[#8B4049]"
+                    ? "border-l-4 border-white"
                     : "border-l-4 border-transparent"
                 }`}
               >

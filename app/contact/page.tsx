@@ -40,7 +40,6 @@ const ContactUsPage: React.FC = () => {
               <h2 className='text-4xl mb-3 md:text-5xl font-bold text-gray-800 font-serif'>
                 Get In Touch
               </h2>
-              <div className='w-24 h-0.5 bg-[#7D2E3D] mx-auto mb-2'></div>
               <p className='md:text-lg px-4 text-gray-500 max-w-2xl mx-auto'>
                 Have questions? We'd love to hear from you. Send us a message
                 and we'll respond as soon as possible.

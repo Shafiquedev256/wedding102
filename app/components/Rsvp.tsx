@@ -240,7 +240,7 @@ export default function RSVPSection() {
                     venue. Departing at 1:00 PM and 1:30 PM.
                   </p>
                 </div>
-                        <div className='flex flex-row space-x-2 justify-center'>
+                        <div className='flex flex-row space-x-8 justify-center'>
                   <div className='flex flex-row space-x-2 items-center'>
                     <span className='text-sm'>Yes</span>
                     <input

@@ -55,9 +55,7 @@ export default function TravelStay() {
               </div>
 
               <div className="p-6">
-                <h4 className="text-2xl font-bold text-gray-900 mb-2">
-                  Hotel
-                </h4>
+                <h4 className="text-2xl font-bold text-gray-900 mb-2">Hotel</h4>
 
                 <div className="flex items-center gap-2 text-gray-600 mb-3">
                   <i className="ri-map-pin-line text-[#7D2E3D]" />
@@ -80,102 +78,127 @@ export default function TravelStay() {
         </div>
 
         {/* Driving */}
-        <div className="max-w-3xl mx-auto">
-          <div className="mb-8">
-            <h3 className="text-3xl font-serif text-center md:text-left text-[#7D2E3D]">
-              Driving
-            </h3>
-          </div>
+        <div className="bg-[#FDF8F5] backdrop-blur-sm rounded-2xl p-6 shadow-lg mb-16">
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Left side - Driving Image */}
+            <div className="relative overflow-hidden rounded-xl w-full h-full min-h-[300px]">
+              <img
+                src="https://readdy.ai/api/search-image?query=scenic highway road leading to new york city skyline in distance beautiful clear day professional travel photography clean composition showing urban driving route with modern cars and clear road signs&width=600&height=400&seq=driving001&orientation=landscape"
+                alt="Driving to venue"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
 
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=123+Lorimer+St+New+York+NY+11206"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-br from-[#7D2E3D] to-[#7D2E3D] rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer block mb-12"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-14 h-14 flex items-center justify-center bg-white/20 rounded-full">
+            {/* Right side - Driving Information */}
+            <div className="space-y-6">
+              <div className="w-12 h-12 flex items-center justify-center bg-[#7D2E3D] rounded-full">
                 <i className="ri-car-line text-white text-2xl" />
               </div>
+
+              <br />
+
               <div>
-                <h4 className="text-xl font-bold text-white">
-                  Driving Directions
+                <h4 className="font-semibold text-xl text-[#2a2a2a] mb-4">
+                  Driving
                 </h4>
-                <p className="text-white/80 text-sm mt-1">
-                  Get directions to the venue
-                </p>
-              </div>
-            </div>
 
-            <div className="bg-white/10 rounded-lg p-4 mb-4">
-              <p className="text-white/90 text-sm">
-                Click to get turn-by-turn driving directions to the venue at
-                123 Lorimer St, Williamsburg, NY.
-              </p>
-            </div>
+                <br />
 
-            <div className="flex items-center justify-center gap-2 text-white/90 text-sm">
-              <i className="ri-map-pin-line" />
-              <span>Get Driving Directions</span>
-              <i className="ri-arrow-right-line" />
-            </div>
-          </a>
-
-          {/* Flying */}
-          <div className="bg-[#FDF8F5] backdrop-blur-sm rounded-2xl p-6 shadow-lg">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="relative overflow-hidden rounded-xl min-h-[300px]">
-                <img
-                  src="https://readdy.ai/api/search-image?query=modern airport terminal interior with large windows showing airplanes on tarmac bright natural lighting clean professional travel photography simple composition showcasing aviation and travel atmosphere&width=600&height=400&seq=airport001&orientation=landscape"
-                  alt="Airport"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="space-y-6">
-                <div className="w-12 h-12 flex items-center justify-center bg-[#7D2E3D] rounded-full">
-                  <i className="ri-plane-line text-white text-2xl" />
+                <div className="mb-4 pb-4 border-b border-gray-200">
+                  <p className="text-sm font-bold mb-2">From Manhattan:</p>
+                  <p className="text-sm text-gray-700">
+                    Take FDR Drive North to Exit 15
+                  </p>
+                  <p className="text-sm text-gray-700">
+                    Approximately 25 minutes
+                  </p>
                 </div>
 
-                <div>
-                  <h4 className="font-semibold text-xl text-[#2a2a2a] mb-4">
-                    Flying Options
-                  </h4>
-
-                  <div className="mb-4 pb-4 border-b border-gray-200">
-                    <p className="text-sm font-bold">
-                      John F. Kennedy International (JFK)
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      Distance: 15 miles
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      Travel time: ~30–45 minutes
-                    </p>
-                  </div>
-
-                  <div className="mb-4">
-                    <p className="text-sm font-bold">
-                      LaGuardia Airport (LGA)
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      Distance: 8 miles
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      Travel time: ~20–30 minutes
-                    </p>
-                  </div>
-
-                  <a
-                    href="https://www.google.com/maps/dir//New+York,+NY"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gradient-to-br from-[#7D2E3D] to-[#7D2E3D] rounded-2xl shadow-xl p-4 text-white flex items-center justify-center gap-2 hover:scale-105 transition-all"
-                  >
-                    <i className="ri-map-pin-line text-lg" />
-                    Open in Google Maps
-                  </a>
+                <div className="mb-4">
+                  <p className="text-sm font-bold mb-2">From New Jersey:</p>
+                  <p className="text-sm text-gray-700">
+                    Take I-95 North to Exit 6
+                  </p>
+                  <p className="text-sm text-gray-700">
+                    Approximately 35 minutes
+                  </p>
                 </div>
+
+                <div className="pt-4 border-t border-gray-200">
+                  <p className="text-xs text-gray-600 mb-2">
+                    Parking Information:
+                  </p>
+                  <ul className="space-y-1 text-xs text-gray-600 mb-4">
+                    <li>• Complimentary valet parking available at venue</li>
+                    <li>• Self-parking garage adjacent to venue</li>
+                    <li>• Street parking available nearby</li>
+                  </ul>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/dir//New+York,+NY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-br from-[#7D2E3D] to-[#7D2E3D] rounded-2xl shadow-xl p-4 text-white flex items-center justify-center gap-2 hover:scale-105 transition-all"
+                >
+                  <i className="ri-map-pin-line text-lg" />
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Flying */}
+        <div className="bg-[#FDF8F5] backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative overflow-hidden rounded-xl min-h-[300px]">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern airport terminal interior with large windows showing airplanes on tarmac bright natural lighting clean professional travel photography simple composition showcasing aviation and travel atmosphere&width=600&height=400&seq=airport001&orientation=landscape"
+                alt="Airport"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="space-y-6">
+              <div className="w-12 h-12 flex items-center justify-center bg-[#7D2E3D] rounded-full">
+                <i className="ri-plane-line text-white text-2xl" />
+              </div>
+
+              <div>
+                <h4 className="font-semibold text-xl text-[#2a2a2a] mb-4">
+                  Flying Options
+                </h4>
+
+                <div className="mb-4 pb-4 border-b border-gray-200">
+                  <p className="text-sm font-bold">
+                    John F. Kennedy International (JFK)
+                  </p>
+                  <p className="text-sm text-gray-700">Distance: 15 miles</p>
+                  <p className="text-sm text-gray-700">
+                    Travel time: ~30–45 minutes
+                  </p>
+                </div>
+
+                <div className="mb-4">
+                  <p className="text-sm font-bold">
+                    LaGuardia Airport (LGA)
+                  </p>
+                  <p className="text-sm text-gray-700">Distance: 8 miles</p>
+                  <p className="text-sm text-gray-700">
+                    Travel time: ~20–30 minutes
+                  </p>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/dir//New+York,+NY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-br from-[#7D2E3D] to-[#7D2E3D] rounded-2xl shadow-xl p-4 text-white flex items-center justify-center gap-2 hover:scale-105 transition-all"
+                >
+                  <i className="ri-map-pin-line text-lg" />
+                  Open in Google Maps
+                </a>
               </div>
             </div>
           </div>

@@ -122,84 +122,64 @@ export default function TravelStay() {
               </div>
             </a>
           </div>
-          {/* Flying */}
-          <div className=' my-8'>
-            <h3 className='text-3xl font-serif text-[#7D2E3D] text-center md:text-left '>Flying</h3>
-          </div>
-          <div className='flex flex-col justify-center items-center '>
-            <p className='text-lg text-gray-700 mb-8 text-center md:text-left'></p>
-            <div className='grid md:grid-cols-2 gap-6 max-w-4xl mx-auto md:mx-0'>
-              {/* JFK Airport */}
-              <a
-                href='https://www.google.com/maps/search/?api=1&query=John+F+Kennedy+International+Airport+New+York'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='bg-gradient-to-br from-[#7D2E3D] to-[#7D2E3D] rounded-2xl  p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer'
-              >
-                <div className='flex items-center gap-4 mb-4'>
-                  <div className='w-14 h-14 flex items-center justify-center bg-white/20 rounded-full flex-shrink-0'>
-                    <i className='ri-plane-line text-white text-2xl'></i>
-                  </div>
-                  <div className='flex-1'>
-                    <div className='text-white/80 text-sm font-semibold mb-1'>
-                      JFK
-                    </div>
-                    <h4 className='text-xl font-bold text-white'>
-                      John F. Kennedy International Airport
-                    </h4>
-                  </div>
-                </div>
-                <div className='bg-white/10 rounded-lg p-4 backdrop-blur-sm mb-4'>
-                  <div className='flex items-center justify-between'>
-                    <span className='text-white/90 text-sm font-medium'>
-                      Distance from venue
-                    </span>
-                    <span className='text-white font-semibold'>30 minutes</span>
-                  </div>
-                </div>
-                <div className='flex items-center justify-center gap-2 text-white/90 text-sm'>
-                  <i className='ri-map-pin-line'></i>
-                  <span>View on Google Maps</span>
-                  <i className='ri-arrow-right-line'></i>
-                </div>
-              </a>
-              {/* LaGuardia Airport */}
-              <a
-                href='https://www.google.com/maps/search/?api=1&query=LaGuardia+Airport+New+York'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='bg-gradient-to-br from-[#7D2E3D] to-[#7D2E3D] rounded-2xl  p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer'
-              >
-                <div className='flex items-center gap-4 mb-4'>
-                  <div className='w-14 h-14 flex items-center justify-center bg-white/20 rounded-full flex-shrink-0'>
-                    <i className='ri-plane-line text-white text-2xl'></i>
-                  </div>
-                  <div className='flex-1'>
-                    <div className='text-white/80 text-sm font-semibold mb-1'>
-                      LGA
-                    </div>
-                    <h4 className='text-xl font-bold text-white'>
-                      LaGuardia <div>Airport</div>
-                    </h4>
-                  </div>
-                </div>
-                <div className='bg-white/10 rounded-lg p-4 backdrop-blur-sm mb-4'>
-                  <div className='flex items-center justify-between'>
-                    <span className='text-white/90 text-sm font-medium'>
-                      Distance from venue
-                    </span>
-                    <span className='text-white font-semibold'>30 minutes</span>
-                  </div>
-                </div>
-                <div className='flex items-center justify-center gap-2 text-white/90 text-sm'>
-                  <i className='ri-map-pin-line'></i>
-                  <span>View on Google Maps</span>
-                  <i className='ri-arrow-right-line'></i>
-                </div>
-              </a>
-            </div>
-            <p className='text-lg mt-12 text-gray-700 mb-8 text-left text-left'></p>
-          </div>
+          {/* Flying
+- Combined Airports Card */}
+<div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+  <div className="grid md:grid-cols-2 gap-6">
+    {/* Left side
+- Airport Image */}
+    <div className="relative overflow-hidden rounded-xl w-full h-full min-h-[300px]">
+      <img
+        src="https://readdy.ai/api/search-image?query=modern airport terminal interior with large windows showing airplanes on tarmac bright natural lighting clean professional travel photography simple composition showcasing aviation and travel atmosphere&width=600&height=400&seq=airport001&orientation=landscape"
+        alt="Airport"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+    </div>
+    {/* Right side
+- Airport Information */}
+    <div className="space-y-6">
+      <div className="w-12 h-12 flex items-center justify-center bg-[#d4af37]/10 rounded-full">
+        <i className="ri-plane-line text-[#d4af37] text-2xl"></i>
+      </div>
+    <br>
+      <div>
+        <h4 className="font-semibold text-xl text-[#2a2a2a] mb-4">Flying Options</h4>
+      <br>
+        {/* JFK Airport */}
+        <div className="mb-4 pb-4 border-b border-gray-200">
+          <p className="text-sm font-bold text-[#2a2a2a] mb-2">John F. Kennedy International (JFK)</p>
+          <p className="text-sm text-gray-700">Distance: 15 miles from venue</p>
+          <p className="text-sm text-gray-700">Travel time: ~30-45 minutes</p>
+        </div>
+        {/* LaGuardia Airport */}
+        <div className="mb-4">
+          <p className="text-sm font-bold text-[#2a2a2a] mb-2">LaGuardia Airport (LGA)</p>
+          <p className="text-sm text-gray-700">Distance: 8 miles from venue</p>
+          <p className="text-sm text-gray-700">Travel time: ~20-30 minutes</p>
+        </div>
+        {/* Transportation Info */}
+        <div className="pt-4 border-t border-gray-200">
+          <p className="text-xs text-gray-600 mb-2">Transportation:</p>
+          <ul className="space-y-1 text-xs text-gray-600 mb-4">
+            <li>• Taxi & rideshare available</li>
+            <li>• Airport shuttle service</li>
+            <li>• Rental cars on-site</li>
+          </ul>
+        </div>
+        {/* Google Maps Button */}
+        <a
+          href="https://www.google.com/maps/dir//New+York,+NY"
+          target="_blank"
+          rel="noopener noreferrer"
+         className='bg-gradient-to-br from-[#7D2E3D] to-[#7D2E3D] rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer block'
+        >
+          <i className="ri-map-pin-line text-lg"></i>
+          Open in Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </section>

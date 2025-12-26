@@ -155,7 +155,7 @@ export default function Hero() {
             <span>ARE</span>
             <span>INVITED</span>
           </div>
-          <div className="mt-8 p-4">
+          <div className="mt-8 p-4 space-y-4 flex flex-col ">
            <div className='flex flex-row space-x-3 text-gray-800 justify-center items-center'>
             <div className='text-center'>12 . 06 . 2026 </div>
             <span>|</span>

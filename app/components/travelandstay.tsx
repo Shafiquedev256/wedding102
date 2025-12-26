@@ -78,7 +78,7 @@ export default function TravelStay() {
         </div>
 
         {/* Driving */}
-        <div className="bg-[#FDF8F5] backdrop-blur-sm max-w-3xl mx-auto rounded-2xl p-6 shadow-lg mb-16">
+        <div className="bg-[#FDF8F5] backdrop-blur-sm max-w-3xl mx-auto rounded-2xl  shadow-lg mb-16">
           <div className="grid md:grid-cols-2 gap-6">
             {/* Left side - Driving Image */}
             <div className="relative overflow-hidden rounded-xl w-full h-full min-h-[300px]">
@@ -150,7 +150,7 @@ export default function TravelStay() {
         </div>
 
         {/* Flying */}
-        <div className="bg-[#FDF8F5] backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+        <div className="bg-[#FDF8F5] backdrop-blur-sm rounded-2xl  shadow-lg">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="relative overflow-hidden rounded-xl min-h-[300px]">
               <img

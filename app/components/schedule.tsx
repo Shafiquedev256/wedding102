@@ -9,7 +9,7 @@ export default function Schedule() {
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 font-serif'>
             SCHEDULE
           </h2>
-          <div className='w-24 h-0.5 bg-gradient-to-r from-transparent via-[#800020] to-transparent mx-auto mb-4'></div>
+          
           <p className='text-base md:text-lg text-gray-600 px-4'>
             We're so ecstatic to share this special day with you!
           </p>
@@ -19,9 +19,11 @@ export default function Schedule() {
           {/* Vertical line */}
           <div className='absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#800020] via-[#a0002a] to-[#800020]'></div>
 
-          {/* Top circle */}
-          <div className='absolute left-1/2 transform -translate-x-1/2 -top-4 w-4 h-4 bg-white border-3 border-[#800020] rounded-full shadow-md'></div>
+          {/* Top circle 
+                    <div className='absolute left-1/2 transform -translate-x-1/2 -top-4 w-4 h-4 bg-white border-3 border-[#800020] rounded-full shadow-md'></div>
 
+
+          */}
           {/* Timeline items */}
           <div className='space-y-0'>
             {/* 1:00 PM */}
@@ -115,8 +117,10 @@ export default function Schedule() {
               </div>
             </div>
           </div>
-          {/* Bottom circle */}
-          <div className='absolute left-1/2 transform -translate-x-1/2 -bottom-4 w-4 h-4 bg-white border-3 border-[#800020] rounded-full shadow-md'></div>
+          {/* Bottom circle 
+                    <div className='absolute left-1/2 transform -translate-x-1/2 -bottom-4 w-4 h-4 bg-white border-3 border-[#800020] rounded-full shadow-md'></div>
+
+          */}
         </div>
       </div>
     </section>

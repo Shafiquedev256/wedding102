@@ -90,7 +90,7 @@ export default function TravelStay() {
             </div>
 
             {/* Right side - Driving Information */}
-            <div className="space-y-6">
+            <div className="space-y-6 p-6">
               <div className="w-12 h-12 flex items-center justify-center bg-[#7D2E3D] rounded-full">
                 <i className="ri-car-line text-white text-2xl" />
               </div>
@@ -160,7 +160,7 @@ export default function TravelStay() {
               />
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 p-6">
               <div className="w-12 h-12 flex items-center justify-center bg-[#7D2E3D] rounded-full">
                 <i className="ri-plane-line text-white text-2xl" />
               </div>

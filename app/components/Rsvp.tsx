@@ -98,7 +98,6 @@ export default function RSVPSection() {
       <div className='max-w-3xl mx-auto px-6'>
         <div className='text-center mb-16'>
           <h2 className='text-5xl font-serif text-gray-800 my-4'>RSVP</h2>
-          <div className='w-24 h-1 bg-[#7D2E3D] mx-auto mb-6'></div>
           <p className='text-gray-700'>
             Please respond by October 1st, 2026. We can't wait to celebrate with
             you!

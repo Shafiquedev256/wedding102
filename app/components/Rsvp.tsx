@@ -227,8 +227,20 @@ export default function RSVPSection() {
 
             {/* Shuttle Bus */}
             <div className=' py-6 rounded-lg'>
-              <div className='flex items-start gap-3'>
-                <div className='flex flex-col space-y-2 justify-center'>
+              <div className='flex flex-col justify-center items-center items-start gap-3'>
+                <div>
+                  <label
+                    htmlFor='needs_bus'
+                    className='text-sm font-semibold text-gray-800 cursor-pointer'
+                  >
+                    Would you like to reserve a spot on the shuttle bus?
+                  </label>
+                  <p className='text-xs text-gray-600 mt-1'>
+                    Complimentary shuttle service from select hotels to the
+                    venue. Departing at 1:00 PM and 1:30 PM.
+                  </p>
+                </div>
+                        <div className='flex flex-row space-x-2 justify-center'>
                   <div className='flex flex-row space-x-2 items-center'>
                     <span className='text-sm'>Yes</span>
                     <input
@@ -249,19 +261,6 @@ export default function RSVPSection() {
                       className='mt-1 w-5 h-5 text-[#7D2E3D] border-gray-300 rounded focus:ring-[#7D2E3D] cursor-pointer'
                     />
                   </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor='needs_bus'
-                    className='text-sm font-semibold text-gray-800 cursor-pointer'
-                  >
-                    Would you like to reserve a spot on the shuttle bus?
-                  </label>
-                  <p className='text-xs text-gray-600 mt-1'>
-                    Complimentary shuttle service from select hotels to the
-                    venue. Departing at 1:00 PM and 1:30 PM.
-                  </p>
                 </div>
               </div>
             </div>

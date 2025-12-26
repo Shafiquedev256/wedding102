@@ -122,7 +122,7 @@ export default function TravelStay() {
           </a>
 
           {/* Flying */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+          <div className="bg-[#FDF8F5] backdrop-blur-sm rounded-2xl p-6 shadow-lg">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="relative overflow-hidden rounded-xl min-h-[300px]">
                 <img
@@ -133,8 +133,8 @@ export default function TravelStay() {
               </div>
 
               <div className="space-y-6">
-                <div className="w-12 h-12 flex items-center justify-center bg-[#d4af37]/10 rounded-full">
-                  <i className="ri-plane-line text-[#d4af37] text-2xl" />
+                <div className="w-12 h-12 flex items-center justify-center bg-[#7D2E3D] rounded-full">
+                  <i className="ri-plane-line text-white text-2xl" />
                 </div>
 
                 <div>

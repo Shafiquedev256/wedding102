@@ -12,7 +12,7 @@ export default function TravelStay() {
           <h2 className="text-5xl font-serif text-gray-800 mb-4">
             Travel &amp; Stay
           </h2>
-          <div className="w-24 h-1 bg-[#7D2E3D] mx-auto mb-6" />
+          
         </div>
 
         {/* Neighborhoods */}

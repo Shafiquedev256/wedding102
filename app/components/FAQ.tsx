@@ -74,10 +74,7 @@ export default function FAQSection() {
 
           <br />
 
-
-
-          <div className="space-y-4 shadow-sm p-4 rounded ">
-                      {/* Gift Information */}
+           {/* Gift Information */}
           <div className="mb-12 text-center px-2">
             <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
               Your presence at our wedding is the greatest gift of all. However,
@@ -91,6 +88,9 @@ export default function FAQSection() {
               generosity.
             </p>
           </div>
+
+          <div className="space-y-4 shadow-sm p-4 rounded ">
+           
             {faqs.map((faq, index) => (
               <div
                 key={index}

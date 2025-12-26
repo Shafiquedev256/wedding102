@@ -150,7 +150,7 @@ export default function TravelStay() {
         </div>
 
         {/* Flying */}
-        <div className="bg-[#FDF8F5] backdrop-blur-sm rounded-2xl  shadow-lg">
+        <div className="bg-[#FDF8F5] backdrop-blur-sm rounded-2xl  max-w-3xl mx-auto  shadow-lg">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="relative overflow-hidden rounded-xl w-full h-full min-h-[300px]">
               <img

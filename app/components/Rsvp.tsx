@@ -97,7 +97,8 @@ export default function RSVPSection() {
     <section id='rsvp' className='py-24  bg-[#FDF8F5]'>
       <div className='max-w-3xl mx-auto px-6'>
         <div className='text-center mb-16'>
-          <h2 className='text-5xl font-serif text-gray-800 my-4'>RSVP</h2>
+          <h2 className='text-5xl  text-gray-800 my-4'>RSVP</h2>
+          <div className='w-24 h-1 bg-[#7D2E3D] mx-auto mb-6'></div>
           <p className='text-gray-700'>
             Please respond by October 1st, 2026. We can't wait to celebrate with
             you!
@@ -227,7 +228,30 @@ export default function RSVPSection() {
 
             {/* Shuttle Bus */}
             <div className=' py-6 rounded-lg'>
-              <div className='flex flex-col justify-center items-center items-start gap-3'>
+              <div className='flex flex-col-reverse '>
+                <div className='flex flex-row space-x-8 mt-3'>
+                  <div className='flex flex-row space-x-2 items-center'>
+                    <input
+                      id='needs_bus'
+                      name='needs_bus'
+                      type='checkbox'
+                      value='Yes'
+                      className='mt-1 w-5 h-5 text-[#7D2E3D] border-gray-300 rounded focus:ring-[#7D2E3D] cursor-pointer'
+                    />
+                    <span className='text-sm'>Yes</span>
+                  </div>
+                  <div className='flex flex-row space-x-3 items-center'>
+                    <input
+                      id='needs_bus'
+                      name='needs_bus'
+                      type='checkbox'
+                      value='No'
+                      className='mt-1 w-5 h-5 text-[#7D2E3D] border-gray-300 rounded focus:ring-[#7D2E3D] cursor-pointer'
+                    />
+                    <span className='text-sm'>No</span>
+                  </div>
+                </div>
+
                 <div>
                   <label
                     htmlFor='needs_bus'
@@ -239,28 +263,6 @@ export default function RSVPSection() {
                     Complimentary shuttle service from select hotels to the
                     venue. Departing at 1:00 PM and 1:30 PM.
                   </p>
-                </div>
-                        <div className='flex flex-row space-x-8 justify-center'>
-                  <div className='flex flex-row space-x-2 items-center'>
-                    <span className='text-sm'>Yes</span>
-                    <input
-                      id='needs_bus'
-                      name='needs_bus'
-                      type='checkbox'
-                      value='Yes'
-                      className='mt-1 w-5 h-5 text-[#7D2E3D] border-gray-300 rounded focus:ring-[#7D2E3D] cursor-pointer'
-                    />
-                  </div>
-                  <div className='flex flex-row space-x-3 items-center'>
-                    <span className='text-sm'>No</span>
-                    <input
-                      id='needs_bus'
-                      name='needs_bus'
-                      type='checkbox'
-                      value='No'
-                      className='mt-1 w-5 h-5 text-[#7D2E3D] border-gray-300 rounded focus:ring-[#7D2E3D] cursor-pointer'
-                    />
-                  </div>
                 </div>
               </div>
             </div>

@@ -17,11 +17,13 @@ export default function Hero() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className='relative min-h-[90vh] md:h-screen bg-[#FDF8F5] flex flex-col'>
+    <div className='relative min-h-[90vh] text-white md:h-screen bg-[url("/IMG-20251226-WA0000.jpg")] bg-center bg-cover  flex flex-col'>
       {/* Navigation */}
       <nav
         className={`top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "fixed bg-white shadow-md" : "absolute bg-transparent"
+          scrolled
+            ? "fixed bg-white shadow-md text-black"
+            : "absolute bg-transparent"
         }`}
       >
         <div className='max-w-7xl mx-auto px-6 py-6 flex items-center justify-between'>
@@ -40,25 +42,25 @@ export default function Hero() {
           <div className='hidden md:flex gap-8 items-center'>
             <Link
               href='/schedule'
-              className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors'
+              className='text-sm tracking-wider hover:text-white transition-colors'
             >
               SCHEDULE
             </Link>
             <Link
               href='/travel'
-              className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors'
+              className='text-sm tracking-wider hover:text-white transition-colors'
             >
               TRAVEL & STAY
             </Link>
             <Link
               href='/faq'
-              className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors'
+              className='text-sm tracking-wider hover:text-white transition-colors'
             >
               FAQ
             </Link>
             <Link
               href='/contact'
-              className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors'
+              className='text-sm tracking-wider hover:text-white transition-colors'
             >
               CONTACT
             </Link>
@@ -76,7 +78,7 @@ export default function Hero() {
             onClick={() => setMenuOpen(true)}
             className='md:hidden'
           >
-            <i className='ri-menu-3-line text-3xl text-[#7D2E3D]' />
+            <i className='ri-menu-3-line text-3xl text-white' />
           </button>
         </div>
 
@@ -125,7 +127,7 @@ export default function Hero() {
               <Link
                 href='/rsvp'
                 onClick={closeMenu}
-                className='bg-[#7D2E3D] w-60 text-center text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors'
+                className='bg-white w-60 text-center text-white px-6 py-2 text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors'
               >
                 RSVP
               </Link>
@@ -137,38 +139,37 @@ export default function Hero() {
       {/* Hero Content */}
       <div className='flex flex-1 flex-col items-center justify-center px-6 text-center'>
         <div className='max-w-4xl w-full space-y-6 md:space-y-8'>
-          <div className='text-[#7D2E3D] font-serif italic text-sm md:text-base tracking-widest'>
+          <div className='text-white font-serif italic text-sm md:text-base tracking-widest'>
             The wedding of
           </div>
 
           <h1
             style={{ fontFamily: "Playfair Display, serif" }}
-            className='flex justify-center items-center space-x-3 text-[#7D2E3D] text-5xl md:text-7xl lg:text-8xl leading-tight'
+            className='flex justify-center items-center space-x-3 text-white text-5xl md:text-7xl lg:text-8xl leading-tight'
           >
             <span>Gemma</span>
             <span>&</span>
             <span>Jeﬄe</span>
           </h1>
 
-          <div className='flex justify-center gap-4 md:gap-8 text-xs sm:text-sm md:text-base tracking-widest text-gray-600'>
+          <div className='flex justify-center mt-12 gap-4 md:gap-8 text-xs sm:text-sm md:text-base tracking-widest text-white'>
             <span>YOU</span>
             <span>ARE</span>
             <span>INVITED</span>
           </div>
-          <div className="mt-8 p-4 space-y-4 flex flex-col justify-center items-center">
-           <div className='flex flex-row space-x-3 text-gray-800 justify-center items-center'>
-            <div className='text-center'>12 . 06 . 2026 </div>
-            <span>|</span>
-            <div>BELL RECO, SPAIN</div>
+          <div className='mt-12 p-4 space-y-4 flex flex-col justify-center items-center'>
+            <div className='flex flex-row space-x-3 text-white justify-center items-center'>
+              <div className='text-center'>12 . 06 . 2026 </div>
+              <span>|</span>
+              <div>BELL RECO, SPAIN</div>
+            </div>
+            <Link
+              href='/rsvp'
+              className='inline-block bg-[#7D2E3D] text-white px-8 py-3 rounded text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors'
+            >
+              RSVP
+            </Link>
           </div>
-          <Link
-            href='/rsvp'
-            className='inline-block bg-[#7D2E3D] text-white px-8 py-3 rounded text-sm tracking-wider hover:bg-[#5D1E2D] transition-colors'
-          >
-            RSVP
-          </Link>
-          </div>
-         
         </div>
       </div>
     </div>

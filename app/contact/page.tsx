@@ -37,7 +37,7 @@ const ContactUsPage: React.FC = () => {
         <div className=' mt-12'>
           <div className='  '>
             <div className='text-center mb-12'>
-              <h2 className='text-4xl mb-3 md:text-5xl font-bold text-gray-800 font-serif'>
+              <h2 className='text-4xl mb-3 md:text-5xl font-bold text-gray-800'>
                 Get In Touch
               </h2>
               <p className='md:text-lg px-4 text-gray-500 max-w-2xl mx-auto'>

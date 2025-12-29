@@ -12,6 +12,11 @@ export default function FAQSection() {
 
   const faqs: FAQ[] = [
     {
+      question: "Where are you registered?",
+      answer:
+        "Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we have registered at select stores for your convenience. For those who prefer to give monetary gifts, we have set up a honeymoon fund. You can also send gifts directly to our registry or bring cards to the reception. We are grateful for your love and generosity.",
+    },
+    {
       question: "What is the dress code?",
       answer: "Semi-formal attire. We suggest cocktail dresses and suits.",
     },
@@ -53,11 +58,6 @@ export default function FAQSection() {
       answer:
         "We kindly ask for an unplugged ceremony. Our photographer will capture everything!",
     },
-    {
-      question: "Where are you registered?",
-      answer:
-        "Your presence is the best gift! If you wish to give, we have a registry at [Store Name].",
-    },
   ];
 
   const toggleFAQ = (index: number) => {
@@ -65,32 +65,16 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-20 px-2 md:px-6 bg-[#FDF8F5] min-h-screen ">
-      <div className="px-3 md:max-w-3xl md:mx-auto">
-        <div className=" rounded-2xl   md:p-12">
-          <h2 className="text-lg md:text-4xl font-serif text-gray-900 mb-6 md:mb-12 pt-20 text-center">
+    <section id='faq' className='py-20 px-2 md:px-6 bg-[#FDF8F5] min-h-screen '>
+      <div className='px-3 md:max-w-3xl md:mx-auto'>
+        <div className=' rounded-2xl   md:p-12'>
+          <h2 className='text-lg md:text-4xl font-serif text-gray-900 mb-6 md:mb-12 pt-20 text-center'>
             Your Questions Answered
           </h2>
 
           <br />
 
-           {/* Gift Information */}
-          <div className="mb-12 text-center px-2">
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-              Your presence at our wedding is the greatest gift of all. However,
-              if you wish to honor us with a gift, we have registered at select
-              stores for your convenience.
-            </p>
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              For those who prefer to give monetary gifts, we have set up a
-              honeymoon fund. You can also send gifts directly to our registry or
-              bring cards to the reception. We are grateful for your love and
-              generosity.
-            </p>
-          </div>
-
-          <div className="space-y-4 shadow-sm p-4 rounded ">
-           
+          <div className='space-y-4  p-4 rounded '>
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -102,9 +86,9 @@ export default function FAQSection() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-[#FDF8F5]/80 transition-colors cursor-pointer"
+                  className='w-full flex items-center justify-between p-6 text-left hover:bg-[#FDF8F5]/80 transition-colors cursor-pointer'
                 >
-                  <span className="md:text-lg font-medium text-gray-900 pr-4">
+                  <span className='md:text-lg font-medium text-gray-900 pr-4'>
                     {faq.question}
                   </span>
                   <i
@@ -121,7 +105,7 @@ export default function FAQSection() {
                       : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                  <div className='px-6 pb-6 text-gray-700 leading-relaxed'>
                     {faq.answer}
                   </div>
                 </div>
@@ -133,4 +117,3 @@ export default function FAQSection() {
     </section>
   );
 }
-

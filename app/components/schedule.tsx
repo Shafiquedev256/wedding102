@@ -9,7 +9,7 @@ export default function Schedule() {
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 font-serif'>
             SCHEDULE
           </h2>
-          
+
           <p className='text-base md:text-lg text-gray-600 px-4'>
             We're so ecstatic to share this special day with you!
           </p>
@@ -27,7 +27,7 @@ export default function Schedule() {
           {/* Timeline items */}
           <div className='space-y-0'>
             {/* 1:00 PM */}
-            <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
+            <div className='relative flex items-center justify-between py-6 md:py-8  '>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
                 <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
                   <span className='text-base   '>1:00 PM</span>
@@ -42,7 +42,7 @@ export default function Schedule() {
               </div>
             </div>
             {/* 2:45 PM */}
-            <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
+            <div className='relative flex items-center justify-between py-6 md:py-8  '>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
                 <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
                   <span className='text-base   '>2:00 PM</span>
@@ -57,7 +57,7 @@ export default function Schedule() {
               </div>
             </div>
             {/* 3:00 PM */}
-            <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
+            <div className='relative flex items-center justify-between py-6 md:py-8  '>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
                 <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
                   <span className='text-base   '>3:00 PM</span>
@@ -72,7 +72,7 @@ export default function Schedule() {
               </div>
             </div>
             {/* 3:15 PM */}
-            <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
+            <div className='relative flex items-center justify-between py-6 md:py-8  '>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
                 <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
                   <span className='text-base   '>3:15 PM</span>
@@ -87,7 +87,7 @@ export default function Schedule() {
               </div>
             </div>
             {/* 4:00 PM */}
-            <div className='relative flex items-center justify-between py-6 md:py-8 border-b border-gray-200'>
+            <div className='relative flex items-center justify-between py-6 md:py-8  '>
               <div className='w-1/2 text-right pr-6 md:pr-12'>
                 <div className='inline-flex items-center gap-2 text-gray-700 px-3 md:px-4 py-2 rounded-full '>
                   <span className='text-base   '>4:00 PM</span>

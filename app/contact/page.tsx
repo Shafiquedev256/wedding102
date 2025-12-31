@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import Navigation from "../components/navbar";
-import Contact from "../components/contact";
 
 const ContactUsPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +9,13 @@ const ContactUsPage: React.FC = () => {
     message: "",
   });
   const [successMessage, setSuccessMessage] = useState<string>("");
+
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,11 +39,11 @@ const ContactUsPage: React.FC = () => {
   return (
     <>
       <main className=' bg-[#FDF8F5] min-h-screen py-20 md:py-24 overflow-hidden w-full'>
-        <Navigation scrolled={true} />
+        <Navigation scrolled={scrolled} />
         <div className=' mt-12'>
           <div className='  '>
             <div className='text-center mb-12'>
-              <h2 className='text-4xl mb-3 md:text-5xl font-bold text-gray-800'>
+              <h2 className='text-4xl mb-3 md:text-5xl font-serif font-bold text-gray-800'>
                 Get In Touch
               </h2>
               <p className='md:text-lg px-4 text-gray-500 max-w-2xl mx-auto'>
@@ -50,9 +56,6 @@ const ContactUsPage: React.FC = () => {
 
               {/* Message Form Section */}
               <section className='w-full p-4 md:w-2/4'>
-                <h2 className='text-2xl font-semibold text-gray-600 mb-4'>
-                  Send Us a Message
-                </h2>
                 <form onSubmit={handleSubmit} className='space-y-4'>
                   <div>
                     <label

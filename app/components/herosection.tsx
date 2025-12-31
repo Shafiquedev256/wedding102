@@ -17,12 +17,12 @@ export default function Hero() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className='relative min-h-[90vh] text-white md:h-screen bg-[url("/IMG-20251226-WA0000.jpg")] bg-center bg-cover  flex flex-col'>
+    <div className='relative min-h-[98vh] text-white md:h-screen bg-[url("/IMG-20251226-WA0000.jpg")] bg-center bg-cover  flex flex-col'>
       {/* Navigation */}
       <nav
         className={`top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "fixed bg-white shadow-md text-black"
+            ? "fixed bg-[#FDF8F5] shadow-md text-black"
             : "absolute bg-transparent"
         }`}
       >
@@ -78,7 +78,11 @@ export default function Hero() {
             onClick={() => setMenuOpen(true)}
             className='md:hidden'
           >
-            <i className='ri-menu-3-line text-3xl text-white' />
+            <i
+              className={`ri-menu-3-line text-3xl  ${
+                scrolled ? "text-black" : "text-[#FDF8F5]"
+              }`}
+            />
           </button>
         </div>
 
@@ -139,29 +143,34 @@ export default function Hero() {
       {/* Hero Content */}
       <div className='flex flex-1 flex-col items-center justify-center px-6 text-center'>
         <div className='max-w-4xl w-full space-y-6 md:space-y-8'>
-          <div className='text-white font-serif italic text-sm md:text-base tracking-widest'>
-            The wedding of
+          <div className='p-2 mt-12'></div>
+          <div className='relative pt-6'>
+            <div className='absolute top-0 left-0 w-full text-white text-center  font-serif italic text-sm md:text-base tracking-widest'>
+              The wedding of
+            </div>
+            <h1
+              style={{ fontFamily: "Playfair Display, serif" }}
+              className='  flex justify-center  items-center space-x-3 text-white text-5xl md:text-7xl lg:text-9xl leading-tight'
+            >
+              <span>Gemma</span>
+              <span>&</span>
+              <span>Jeﬄe</span>
+            </h1>
           </div>
 
-          <h1
-            style={{ fontFamily: "Playfair Display, serif" }}
-            className='flex justify-center items-center space-x-3 text-white text-5xl md:text-7xl lg:text-8xl leading-tight'
-          >
-            <span>Gemma</span>
-            <span>&</span>
-            <span>Jeﬄe</span>
-          </h1>
-
+          <div className='p-2 mb-18 h-24 '></div>
           <div className='flex justify-center mt-12 gap-4 md:gap-8 text-xs sm:text-sm md:text-base tracking-widest text-white'>
             <span>YOU</span>
             <span>ARE</span>
             <span>INVITED</span>
           </div>
-          <div className='mt-12 p-4 space-y-4 flex flex-col justify-center items-center'>
+          <div className='  p-2 space-y-4 flex flex-col justify-center items-center'>
             <div className='flex flex-row space-x-3 text-white justify-center items-center'>
-              <div className='text-center'>12 . 06 . 2026 </div>
+              <div className='text-center whitespace-nowrap'>
+                12 . 06 . 2026{" "}
+              </div>
               <span>|</span>
-              <div>BELL RECO, SPAIN</div>
+              <div className='whitespace-nowrap'>BELL RECO, SPAIN</div>
             </div>
             <Link
               href='/rsvp'

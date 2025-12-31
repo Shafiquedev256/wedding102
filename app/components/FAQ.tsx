@@ -65,7 +65,10 @@ export default function FAQSection() {
   };
 
   return (
-    <section id='faq' className='py-20 px-2 md:px-6 bg-[#FDF8F5] min-h-screen '>
+    <section
+      id='faq'
+      className='py-20  px-2 md:px-6 bg-[#FDF8F5] min-h-screen '
+    >
       <div className='px-3 md:max-w-3xl md:mx-auto'>
         <div className=' rounded-2xl   md:p-12'>
           <h2 className='text-lg md:text-4xl font-serif text-gray-900 mb-6 md:mb-12 pt-20 text-center'>
@@ -74,7 +77,7 @@ export default function FAQSection() {
 
           <br />
 
-          <div className='space-y-4  p-4 rounded '>
+          <div className='space-y-4 bg-[#FDF8F5] p-4 rounded '>
             {faqs.map((faq, index) => (
               <div
                 key={index}

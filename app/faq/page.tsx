@@ -1,10 +1,10 @@
-"use client" 
-import {useState, useEffect} from "react" 
+"use client";
+import { useState, useEffect } from "react";
 import FAQSection from "../components/FAQ";
 import Navigation from "../components/navbar";
 
 const SchedulePage = () => {
-  const [scrolled, setScrolled] =useState(false) 
+  const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
@@ -12,10 +12,10 @@ const SchedulePage = () => {
   }, []);
 
   return (
-    <>
-      <Navigation scrolled />
+    <section className="relative">
+      <Navigation scrolled={scrolled} />
       <FAQSection />
-    </>
+    </section>
   );
 };
 

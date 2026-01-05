@@ -30,7 +30,7 @@ export default function Hero() {
           {/* Logo */}
           <Link href='/'>
             <Image
-              src='/logo.png'
+              src={`${scrolled ? "/logo.png" : "/black3.png"}`}
               alt='Wedding Logo'
               width={40}
               height={40}
@@ -158,13 +158,13 @@ export default function Hero() {
             </h1>
           </div>
 
-          <div className='p-2 mb-18 h-24 '></div>
+          <div className='p-2 mb-20 md:mb-18 h-20 md:mt-0 mt-4 md:h-24 '></div>
           <div className='flex justify-center mt-12 gap-4 md:gap-8 text-xs sm:text-sm md:text-base tracking-widest text-white'>
             <span>YOU</span>
             <span>ARE</span>
             <span>INVITED</span>
           </div>
-          <div className='  p-2 space-y-4 flex flex-col justify-center items-center'>
+          <div className=' w-full  p-2 space-y-4 flex flex-col justify-center items-center'>
             <div className='flex flex-row space-x-3 text-white justify-center items-center'>
               <div className='text-center whitespace-nowrap'>
                 12 . 06 . 2026{" "}

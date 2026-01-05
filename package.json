@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.86.0",
+    "axios": "^1.13.2",
     "next": "16.0.10",
+    "next-i18next": "^15.4.3",
     "next-intl": "^4.6.1",
     "nodemailer": "^7.0.11",
     "react": "19.2.0",

@@ -229,20 +229,20 @@ export default function RSVPSection() {
                 <div className='flex flex-row space-x-8 mt-3'>
                   <div className='flex flex-row space-x-2 items-center'>
                     <input
-                      id='needs_bus'
+                      id='needs_bus_yes'
                       name='needs_bus'
-                      type='checkbox'
-                      value='Yes'
+                      type='radio'
+                      value='yes'
                       className='mt-1 w-5 h-5 text-[#7D2E3D] border-gray-300 rounded focus:ring-[#7D2E3D] cursor-pointer'
                     />
                     <span className='text-sm'>Yes</span>
                   </div>
                   <div className='flex flex-row space-x-3 items-center'>
                     <input
-                      id='needs_bus'
+                      id='needs_bus_no'
                       name='needs_bus'
-                      type='checkbox'
-                      value='No'
+                      type='radio'
+                      value='no'
                       className='mt-1 w-5 h-5 text-[#7D2E3D] border-gray-300 rounded focus:ring-[#7D2E3D] cursor-pointer'
                     />
                     <span className='text-sm'>No</span>

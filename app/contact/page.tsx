@@ -5,7 +5,7 @@ import Navigation from "../components/navbar";
 const ContactUsPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+
     message: "",
   });
   const [successMessage, setSuccessMessage] = useState<string>("");
@@ -31,7 +31,7 @@ const ContactUsPage: React.FC = () => {
 
     // Simulate form submission
     setSuccessMessage("Your message has been sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", message: "" });
 
     // Here you could integrate an actual backend submission (API call).
   };
@@ -73,26 +73,6 @@ const ContactUsPage: React.FC = () => {
                       onChange={handleChange}
                       required
                       className='mt-1 block w-full p-3  border-gray-300 border bg-white rounded-md 
-                     focus:outline-none focus:ring-blue-500 focus:border-blue-500'
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor='email'
-                      className='block text-[#FDF8F5] text-sm font-medium '
-                    >
-                      Email
-                    </label>
-                    <input
-                      placeholder='Email...'
-                      type='email'
-                      id='email'
-                      name='email'
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className='mt-1 block w-full p-3 border border-gray-300 border-[1px] bg-white rounded-md 
                      focus:outline-none focus:ring-blue-500 focus:border-blue-500'
                     />
                   </div>

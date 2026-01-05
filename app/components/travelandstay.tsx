@@ -35,11 +35,7 @@ export default function TravelStay() {
           </div>
 
           <div className='md:p-8 rounded-lg mb-8'>
-            <h4 className='text-xl font-semibold text-gray-800 mb-3'>
-              Williamsburg
-            </h4>
-
-            <div className='rounded-2xl  overflow-hidden transition-all duration-300'>
+            <div className='rounded  overflow-hidden transition-all duration-300'>
               <div className='w-full md:h-[70vh]'>
                 <img
                   src='https://readdy.ai/api/search-image?query=Modern boutique hotel exterior in Williamsburg Brooklyn with contemporary architecture, stylish urban design, welcoming entrance with warm lighting, trendy neighborhood setting with tree-lined street, sophisticated hospitality venue with clean minimalist aesthetic and inviting atmosphere perfect for wedding guests&width=800&height=600&seq=williamsburg-hotel-002&orientation=landscape'
@@ -48,7 +44,11 @@ export default function TravelStay() {
                 />
               </div>
 
-              <div className='p-6'>
+              <div className='py-6'>
+                <h4 className='text-xl  font-semibold text-gray-800 mb-3'>
+                  Williamsburg
+                </h4>
+
                 <p className='text-gray-600 my-3 leading-relaxed'>
                   We've reserved a block of rooms at the following hotel. During
                   the weekend, we have special rates.
@@ -80,7 +80,7 @@ export default function TravelStay() {
             Driving
           </h3>
         </div>
-        <div className='bg-[#FDF8F5] backdrop-blur-sm max-w-3xl mx-auto rounded-2xl    mb-16'>
+        <div className='bg-[#FDF8F5] backdrop-blur-sm max-w-3xl mx-auto rounded    mb-16'>
           <div className=''>
             {/* Right side - Driving Information */}
             <div className='space-y-6 p-6'>
@@ -122,7 +122,7 @@ export default function TravelStay() {
                   href='https://www.google.com/maps/dir//New+York,+NY'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='bg-gradient-to-br from-[#7D2E3D] to-[#7D2E3D] rounded-2xl  p-4 text-white flex items-center justify-center gap-2 hover:scale-105 transition-all'
+                  className='bg-gradient-to-br from-[#7D2E3D] to-[#7D2E3D] rounded  p-4 text-white flex items-center justify-center gap-2 hover:scale-105 transition-all'
                 >
                   <i className='ri-map-pin-line text-lg' />
                   Open in Google Maps
@@ -138,7 +138,7 @@ export default function TravelStay() {
             Flying
           </h3>
         </div>
-        <div className='bg-[#FDF8F5] backdrop-blur-sm rounded-2xl  max-w-3xl mx-auto   '>
+        <div className='bg-[#FDF8F5] backdrop-blur-sm rounded  max-w-3xl mx-auto   '>
           <div className=' '>
             <div className='space-y-6 p-6'>
               <div>
@@ -157,7 +157,7 @@ export default function TravelStay() {
                       href='https://www.google.com/maps/dir//New+York,+NY'
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='bg-gradient-to-br mt-2 from-[#7D2E3D] to-[#7D2E3D] rounded-2xl  p-4 text-white flex items-center justify-center gap-2 hover:scale-105 transition-all'
+                      className='bg-gradient-to-br mt-2 from-[#7D2E3D] to-[#7D2E3D] rounded  p-4 text-white flex items-center justify-center gap-2 hover:scale-105 transition-all'
                     >
                       <i className='ri-map-pin-line text-lg' />
                       Open in Google Maps
@@ -177,7 +177,7 @@ export default function TravelStay() {
                     href='https://www.google.com/maps/dir//New+York,+NY'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='bg-gradient-to-br mt-2 from-[#7D2E3D] to-[#7D2E3D] rounded-2xl  p-4 text-white flex items-center justify-center gap-2 hover:scale-105 transition-all'
+                    className='bg-gradient-to-br mt-2 from-[#7D2E3D] to-[#7D2E3D] rounded  p-4 text-white flex items-center justify-center gap-2 hover:scale-105 transition-all'
                   >
                     <i className='ri-map-pin-line text-lg' />
                     Open in Google Maps

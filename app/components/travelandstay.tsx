@@ -9,7 +9,7 @@ export default function TravelStay() {
       <div className='max-w-6xl mx-auto'>
         {/* Heading */}
         <div className='text-center mb-16'>
-          <h2 className='text-5xl font-serif text-gray-800 mb-4'>
+          <h2 className='text-lg md:text-4xl font-serif text-gray-900  text-center'>
             Travel &amp; Stay
           </h2>
         </div>

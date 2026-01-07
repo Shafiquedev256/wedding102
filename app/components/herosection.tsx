@@ -17,7 +17,7 @@ export default function Hero() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className='relative min-h-[98vh] text-white md:h-screen bg-[url("/IMG-20251226-WA0000.jpg")] bg-center bg-cover  flex flex-col'>
+    <div className='relative min-h-screen text-white md:h-screen bg-[url("/IMG-20251226-WA0000.jpg")] bg-center bg-cover  flex flex-col'>
       {/* Navigation */}
       <nav
         className={`top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -150,7 +150,7 @@ export default function Hero() {
             </div>
             <h1
               style={{ fontFamily: "Playfair Display, serif" }}
-              className='  flex justify-center  items-center space-x-3 text-white text-5xl md:text-7xl lg:text-9xl leading-tight'
+              className='md:mt-0 mt-6  flex justify-center  items-center space-x-3 text-white text-[60px] md:text-7xl lg:text-9xl leading-tight'
             >
               <span>Gemma</span>
               <span>&</span>
@@ -158,7 +158,7 @@ export default function Hero() {
             </h1>
           </div>
 
-          <div className='p-2 mb-20 md:mb-18 h-20 md:mt-0 mt-4 md:h-24 '></div>
+          <div className='p-2 md:pb-2 pb-4  md:mb-18 h-10 md:mt-0 md:pt-2 pt-8 md:h-24 '></div>
           <div className='flex justify-center mt-12 gap-4 md:gap-8 text-xs sm:text-sm md:text-base tracking-widest text-white'>
             <span>YOU</span>
             <span>ARE</span>
@@ -166,11 +166,13 @@ export default function Hero() {
           </div>
           <div className=' w-full  p-2 space-y-4 flex flex-col justify-center items-center'>
             <div className='flex flex-row space-x-3 text-white justify-center items-center'>
-              <div className='text-center whitespace-nowrap'>
+              <span className='text-center whitespace-nowrap'>
                 12 . 06 . 2026{" "}
-              </div>
+              </span>
               <span>|</span>
-              <div className='whitespace-nowrap'>BELL RECO, SPAIN</div>
+              <span className='whitespace-nowrap'>
+                BELL RECO , ARGENTONA , SPAIN
+              </span>
             </div>
             <Link
               href='/rsvp'

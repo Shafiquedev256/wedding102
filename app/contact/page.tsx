@@ -5,7 +5,7 @@ import Navigation from "../components/navbar";
 const ContactUsPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
-
+    email: "",
     message: "",
   });
   const [successMessage, setSuccessMessage] = useState<string>("");
@@ -31,7 +31,7 @@ const ContactUsPage: React.FC = () => {
 
     // Simulate form submission
     setSuccessMessage("Your message has been sent successfully!");
-    setFormData({ name: "", message: "" });
+    setFormData({ name: "", message: "", email: "" });
 
     // Here you could integrate an actual backend submission (API call).
   };
@@ -42,8 +42,8 @@ const ContactUsPage: React.FC = () => {
         <Navigation scrolled={scrolled} />
         <div className=' mt-12'>
           <div className='  '>
-            <div className='text-center mb-12'>
-              <h2 className='text-4xl mb-3 md:text-5xl font-serif font-bold text-gray-800'>
+            <div className='text-center mb-6'>
+              <h2 className='text-lg md:text-4xl mb-3 font-serif text-gray-900  text-center'>
                 Get In Touch
               </h2>
               <p className='md:text-lg px-4 text-gray-500 max-w-2xl mx-auto'>
@@ -70,6 +70,25 @@ const ContactUsPage: React.FC = () => {
                       id='name'
                       name='name'
                       value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className='mt-1 block w-full p-3  border-gray-300 border bg-white rounded-md 
+                     focus:outline-none focus:ring-blue-500 focus:border-blue-500'
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor='email'
+                      className='block text-[#FDF8F5] text-sm font-medium '
+                    >
+                      Email
+                    </label>
+                    <input
+                      placeholder='Email...'
+                      type='email'
+                      id='email'
+                      name='email'
+                      value={formData.email}
                       onChange={handleChange}
                       required
                       className='mt-1 block w-full p-3  border-gray-300 border bg-white rounded-md 

@@ -5,8 +5,8 @@ export default function Schedule() {
       className='pt-24 min-h-screen md:py-24 px-4  w-full overflow-x-hidden bg-[#FDF8F5]'
     >
       <div className='max-w-4xl mx-auto'>
-        <div className='text-center mt-14 mb-12 md:mb-16'>
-          <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 font-serif'>
+        <div className='text-center  mb-12 md:mb-16'>
+          <h2 className='text-lg md:text-4xl font-serif text-gray-900 mb-6 md:mb-12 pt-20 text-center'>
             SCHEDULE
           </h2>
 

@@ -97,7 +97,9 @@ export default function RSVPSection() {
     <section id='rsvp' className='py-24  bg-[#FDF8F5]'>
       <div className='max-w-3xl mx-auto px-6'>
         <div className='text-center mb-8'>
-          <h2 className='text-5xl font-serif text-gray-800 my-4'>RSVP</h2>
+          <h2 className='text-lg md:text-4xl mb-6 font-serif text-gray-900  text-center'>
+            RSVP
+          </h2>
 
           <p className='text-gray-700'>
             Please respond by October 1st, 2026. We can't wait to celebrate with
@@ -121,24 +123,6 @@ export default function RSVPSection() {
                 required
                 className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] bg-white text-sm'
                 placeholder='Enter your full name'
-              />
-            </div>
-
-            {/* Email */}
-            <div>
-              <label
-                htmlFor='email'
-                className='block text-sm font-semibold text-gray-800 mb-2'
-              >
-                Email Address *
-              </label>
-              <input
-                id='email'
-                name='email'
-                type='email'
-                required
-                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7D2E3D] bg-white text-sm'
-                placeholder='your.email@example.com'
               />
             </div>
 

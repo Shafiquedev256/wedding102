@@ -10,7 +10,7 @@ export default function Footer() {
         <div className='py-8'>
           <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
             <p className='text-xs text-center w-full text-gray-600'>
-              © 2025 Gemma & Jeﬄe. All rights reserved.
+              © 2026 Gemma & Jeﬄe. All rights reserved.
             </p>
           </div>
         </div>

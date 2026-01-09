@@ -14,7 +14,7 @@
     "next": "16.0.10",
     "next-i18next": "^15.4.3",
     "next-intl": "^4.6.1",
-    "nodemailer": "^7.0.11",
+    "nodemailer": "^7.0.12",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "xlsx": "^0.18.5"

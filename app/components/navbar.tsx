@@ -3,6 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "@/app/context/LanguageContext";
+
+// Define Language type
+type Language = "en" | "ca";
 
 interface NavigationProps {
   scrolled: boolean;
@@ -10,8 +14,10 @@ interface NavigationProps {
 
 export default function Navigation({ scrolled }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const { language, setLanguage } = useLanguage(); // no generic needed
   const closeMenu = () => setMenuOpen(false);
+
+  const languages: Language[] = ["en", "ca"]; // lowercase to match Language type
 
   return (
     <nav
@@ -19,17 +25,32 @@ export default function Navigation({ scrolled }: NavigationProps) {
         scrolled ? "fixed bg-[#FDF8F5] shadow-md" : "absolute bg-transparent"
       }`}
     >
-      <div className='max-w-7xl mx-auto px-6 py-6 flex items-center justify-between'>
+      <div className='max-w-7xl mx-auto px-6 py-6 flex items-center justify-between relative'>
         {/* Logo */}
         <Link href='/'>
           <Image
-            src='/logo.png'
+            src={`/logo.png`}
             alt='Wedding Logo'
             width={40}
             height={40}
             className='object-contain'
           />
         </Link>
+
+        {/* Language Toggle */}
+        <div className='absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 z-50'>
+          <select
+            value={language}
+            onChange={(e) => setLanguage(e.target.value as Language)}
+            className='px-2 py-1 bg-[#FDF8F5] text-black focus:outline-none'
+          >
+            {languages.map((lang) => (
+              <option key={lang} value={lang}>
+                {lang.toUpperCase()} {/* display EN/CA */}
+              </option>
+            ))}
+          </select>
+        </div>
 
         {/* Desktop Menu */}
         <div className='hidden md:flex gap-8 items-center'>
@@ -69,7 +90,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
         <button
           aria-label='Open menu'
           onClick={() => setMenuOpen(true)}
-          className='md:hidden'
+          className='md:hidden absolute right-6 top-1/2 transform -translate-y-1/2 z-50'
         >
           <i className='ri-menu-3-line text-3xl text-[#7D2E3D]' />
         </button>
@@ -77,8 +98,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
 
       {/* Mobile Fullscreen Menu */}
       {menuOpen && (
-        <div className='md:hidden fixed inset-0 z-50 bg-transparent'>
-          {/* Close Button */}
+        <div className='md:hidden fixed inset-0 z-40 bg-white'>
           <button
             aria-label='Close menu'
             onClick={closeMenu}
@@ -87,8 +107,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
             &times;
           </button>
 
-          {/* Menu Content */}
-          <div className='flex flex-col justify-center items-center h-full space-y-16 px-6 bg-white'>
+          <div className='flex flex-col justify-center items-center h-full space-y-16 px-6'>
             <Link
               href='/schedule'
               onClick={closeMenu}

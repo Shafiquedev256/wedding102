@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LanguageProvider } from "@/app/context/LanguageContext";
 import {
   Montserrat,
   Cormorant_Garamond,
@@ -43,7 +44,7 @@ export default function RootLayout({
       <body
         className={`${cormorant_Garamond.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >
-        {children}
+       <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

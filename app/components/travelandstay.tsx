@@ -22,6 +22,9 @@ export default function TravelStay() {
   const openMaps = useTranslate("Open in Google Maps");
 
   const flying = useTranslate("Flying");
+  const venueintro = useTranslate(
+    "Set in the hills of Argentona, Bell Recó is a beautifully restored estate that blends historic character with contemporary elegance. Surrounded by gardens and open views, it offers a relaxed yet stylish setting for us to celebrate together in Spain."
+  );
   const venue = useTranslate("Venue");
   const distance = useTranslate("Distance:");
   const travelTime = useTranslate("Travel time:");
@@ -116,8 +119,8 @@ export default function TravelStay() {
                   Bell Reco
                 </h4>
 
-                <p className='text-gray-600 my-3 leading-relaxed'>
-                  {hotelIntro}
+                <p className='text-gray-600 my-3  leading-relaxed'>
+                  {venueintro}
                 </p>
 
                 <div className='flex items-center gap-2 text-gray-600 mb-3'>

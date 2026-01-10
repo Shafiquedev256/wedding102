@@ -21,7 +21,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
 
   return (
     <nav
-      className={`top-0 left-0 right-0 w-full overflow-x-hidden z-50 transition-all duration-300 ${
+      className={`top-0 left-0 right-0  z-50 transition-all duration-300 ${
         scrolled ? "fixed bg-[#FDF8F5] shadow-md" : "absolute bg-transparent"
       }`}
     >

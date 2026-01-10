@@ -189,7 +189,7 @@ export default function Hero() {
             </div>
             <h1
               style={{ fontFamily: "Playfair Display, serif" }}
-              className='md:mt-0 mt-6 flex justify-center items-center space-x-3 text-white text-[60px] md:text-7xl lg:text-9xl leading-tight'
+              className='md:mt-0 mt-6 flex justify-center items-center space-x-3 text-white text-5xl md:text-7xl lg:text-9xl leading-tight'
             >
               <span>Gemma</span>
               <span>&</span>
@@ -197,7 +197,7 @@ export default function Hero() {
             </h1>
           </div>
 
-          <div className='p-2 md:pb-2 pb-4 md:mb-18 h-10 md:mt-0 md:pt-2 pt-8 md:h-20'></div>
+          <div className='p-2 md:pb-2 pb-4 md:mb-18 h-18 md:mt-0 md:pt-2 pt-8 md:h-20'></div>
 
           <div className='flex justify-center mt-12 gap-4 md:gap-8 text-xs sm:text-sm md:text-base tracking-widest text-white'>
             <span>{you}</span>
@@ -206,14 +206,16 @@ export default function Hero() {
           </div>
 
           <div className='w-full p-2 space-y-4 flex flex-col justify-center items-center'>
-            <div className='flex flex-row space-x-3 text-white justify-center items-center'>
+            <div className='flex flex-col md:flex-row space-x-3 text-sm text-white justify-center items-center'>
               <span className='text-center whitespace-nowrap'>
                 12 . 06 . 2026
               </span>
-              <span>|</span>
-              <span className='whitespace-nowrap'>
-                BELL RECO , ARGENTONA , SPAIN
-              </span>
+              <div className='flex flex-row space-x-3 mt-2 md:mt-0 text-sm'>
+                <span className='hidden md:flex'>|</span>
+                <span className='text-sm whitespace-nowrap'>
+                  BELL RECO , ARGENTONA , SPAIN
+                </span>
+              </div>
             </div>
             <Link
               href='/rsvp'

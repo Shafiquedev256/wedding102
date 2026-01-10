@@ -98,7 +98,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
 
       {/* Mobile Fullscreen Menu */}
       {menuOpen && (
-        <div className='md:hidden fixed inset-0 z-40 bg-white'>
+        <div className='md:hidden fixed top-0 left-0 w-full h-full z-40 bg-white'>
           <button
             aria-label='Close menu'
             onClick={closeMenu}

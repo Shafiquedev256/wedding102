@@ -46,7 +46,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
           >
             {languages.map((lang) => (
               <option key={lang} value={lang}>
-                {lang.toUpperCase()} {/* display EN/CA */}
+                {lang == "ca" ? "CAT" : "ENG"} {/* display EN/CA */}
               </option>
             ))}
           </select>

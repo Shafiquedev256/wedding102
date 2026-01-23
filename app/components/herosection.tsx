@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslate } from "@/app/hooks/useTranslate";
 import { useLanguage } from "@/app/context/LanguageContext";
-import WeddingCountdownLoader from "./WeddingCountdownLoader";
 
 // Define the Language type (all lowercase)
 type Language = "en" | "ca";

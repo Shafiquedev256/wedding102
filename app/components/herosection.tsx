@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslate } from "@/app/hooks/useTranslate";
 import { useLanguage } from "@/app/context/LanguageContext";
-import WeddingCountdownLoader from "./WeddingCountdownLoader";
 
 // Define the Language type (all lowercase)
 type Language = "en" | "ca";
@@ -16,7 +15,7 @@ export default function Hero() {
 
   const { language, setLanguage } = useLanguage(); // no generic needed
 
-  const title = useTranslate("The wedding of");
+  const title = useTranslate("The wedding");
   const you = useTranslate("YOU");
   const are = useTranslate("ARE");
   const invited = useTranslate("INVITED");
@@ -33,7 +32,7 @@ export default function Hero() {
 
   return (
     <>
-      <WeddingCountdownLoader />
+      {/* the main page pic will be changed using classname below */}
       <div className="relative min-h-screen text-white md:h-screen bg-[url('/IMG-20251226-WA0000.jpg')] bg-center bg-cover flex flex-col">
         {/* Navigation */}
         <nav
@@ -187,7 +186,7 @@ export default function Hero() {
           <div className='max-w-4xl w-full space-y-6 md:space-y-8'>
             <div className='p-2 mt-12'></div>
             <div className='relative pt-6'>
-              <div className='absolute top-0 left-0 w-full text-white text-center font-serif italic text-sm md:text-base tracking-widest'>
+              <div className=' absolute  top-0 left-0 w-full text-white text-center font-serif italic text-sm md:text-base tracking-widest'>
                 {title}
               </div>
               <h1

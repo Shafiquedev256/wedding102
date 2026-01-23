@@ -16,7 +16,7 @@ export default function Schedule() {
   );
   const flying = useTranslate("Flying");
   const venueintro = useTranslate(
-    "Set in the hills of Argentona, Bell Recó is a beautifully restored estate that blends historic character with contemporary elegance. Surrounded by gardens and open views, it offers a relaxed yet stylish setting for us to celebrate together in Spain.",
+    " Set in the hills of Argentona, Bell Recó is a beautifully restored estate that blends historic character with contemporary elegance. Surrounded by gardens and open views, it offers a relaxed yet stylish setting for us to celebrate together in Spain.",
   );
   const ceremony = useTranslate("Ceremony Begins");
   const reception = useTranslate("Reception");

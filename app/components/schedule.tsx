@@ -14,7 +14,7 @@ export default function Schedule() {
     "/venue4.webp",
   ];
 
-  const title = useTranslate("SCHEDULE");
+  const title = useTranslate("THE BIG DAY");
   const intro = useTranslate(
     "We're so ecstatic to share this special day with you!",
   );

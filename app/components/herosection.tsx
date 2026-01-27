@@ -15,7 +15,7 @@ export default function Hero() {
 
   const { language, setLanguage } = useLanguage(); // no generic needed
 
-  const title = useTranslate("The wedding");
+  const title = useTranslate("The wedding of");
   const you = useTranslate("YOU");
   const are = useTranslate("ARE");
   const invited = useTranslate("INVITED");
@@ -195,7 +195,7 @@ export default function Hero() {
               >
                 <span>Gemma</span>
                 <span>&</span>
-                <span>Jeﬄe</span>
+                <span>Jeele</span>
               </h1>
             </div>
 
@@ -210,7 +210,7 @@ export default function Hero() {
             <div className='w-full p-2  space-y-4 flex flex-col justify-center items-center'>
               <div className='flex flex-row space-x-3 text-sm text-white justify-center items-center'>
                 <span className='text-center whitespace-nowrap'>
-                  12 . 06 . 2026
+                  12 . 09 . 2026
                 </span>
                 <div className='flex flex-row space-x-3  text-sm'>
                   <span className=''>|</span>

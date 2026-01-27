@@ -7,7 +7,7 @@ export default function RSVPSection() {
   // 🔹 TRANSLATION HOOKS — TOP LEVEL ONLY
   const title = useTranslate("RSVP");
   const subtitle = useTranslate(
-    "Please respond by October 1st, 2026. We can't wait to celebrate with you!"
+    "Please respond by 4th of May 2026. We can't wait to celebrate with you!",
   );
 
   const fullNameLabel = useTranslate("Your Full Name *");
@@ -25,7 +25,7 @@ export default function RSVPSection() {
 
   const dietaryLabel = useTranslate("Dietary Requirements / Comments");
   const dietaryPlaceholder = useTranslate(
-    "Please let us know about any dietary restrictions, allergies, or special requests (max 500 characters)"
+    "Please let us know about any dietary restrictions, allergies, or special requests (max 500 characters)",
   );
   const charactersLabel = useTranslate("characters");
 
@@ -33,17 +33,17 @@ export default function RSVPSection() {
   const noText = useTranslate("No");
 
   const shuttleQuestion = useTranslate(
-    "Would you like to reserve a spot on the shuttle bus?"
+    "Would you like to reserve a spot on the shuttle bus?",
   );
   const shuttleInfo = useTranslate(
-    "Complimentary shuttle service from select hotels to the venue. Departing at 1:00 PM and 1:30 PM."
+    "Complimentary shuttle service from select hotels to the venue. Departing at 1:00 PM and 1:30 PM.",
   );
 
   const successMessage = useTranslate(
-    "Thank you for your RSVP! We've received your response."
+    "Thank you for your RSVP! We've received your response.",
   );
   const errorMessage = useTranslate(
-    "There was an error submitting your RSVP. Please try again."
+    "There was an error submitting your RSVP. Please try again.",
   );
 
   const submittingText = useTranslate("SUBMITTING...");
@@ -51,7 +51,9 @@ export default function RSVPSection() {
 
   // 🔹 STATE
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
   const [charCount, setCharCount] = useState(0);
   const [totalGuests, setTotalGuests] = useState(1);
   const [guestNames, setGuestNames] = useState<string[]>([""]);
@@ -127,53 +129,53 @@ export default function RSVPSection() {
   };
 
   return (
-    <section id="rsvp" className="py-24 bg-[#FDF8F5]">
-      <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-8">
-          <h2 className="text-lg md:text-4xl mb-6 font-serif text-gray-900">
+    <section id='rsvp' className='py-24 bg-[#FDF8F5]'>
+      <div className='max-w-3xl mx-auto px-6'>
+        <div className='text-center mb-8'>
+          <h2 className='text-lg md:text-4xl mb-6 font-serif text-gray-900'>
             {title}
           </h2>
-          <p className="text-gray-700">{subtitle}</p>
+          <p className='text-gray-700'>{subtitle}</p>
         </div>
 
-        <form className="bg-[#FDF8F5] p-8" onSubmit={handleSubmit}>
-          <div className="space-y-6">
-            <label className="block text-sm font-semibold text-gray-800">
+        <form className='bg-[#FDF8F5] p-8' onSubmit={handleSubmit}>
+          <div className='space-y-6'>
+            <label className='block text-sm font-semibold text-gray-800'>
               {fullNameLabel}
             </label>
             <input
-              name="name"
+              name='name'
               required
               placeholder={fullNamePlaceholder}
-              className="w-full px-4 py-3 border border-gray-300 bg-white text-sm"
+              className='w-full px-4 py-3 border border-gray-300 bg-white text-sm'
             />
 
-            <label className="block text-sm font-semibold text-gray-800">
+            <label className='block text-sm font-semibold text-gray-800'>
               {phoneLabel}
             </label>
             <input
-              name="phone"
+              name='phone'
               required
               placeholder={phonePlaceholder}
-              className="w-full px-4 py-3 border border-gray-300 bg-white text-sm"
+              className='w-full px-4 py-3 border border-gray-300 bg-white text-sm'
             />
 
-            <label className="block text-sm font-semibold text-gray-800">
+            <label className='block text-sm font-semibold text-gray-800'>
               {totalGuestsLabel}
             </label>
             <select
               value={totalGuests}
               onChange={handleTotalGuestsChange}
-              className="w-full px-4 py-3 border border-gray-300 bg-white text-sm"
+              className='w-full px-4 py-3 border border-gray-300 bg-white text-sm'
             >
-              {Array.from({ length: 10 }, (_, i) => (
+              {Array.from({ length: 5 }, (_, i) => (
                 <option key={i} value={i + 1}>
                   {i + 1} {i === 0 ? guestLabel : guestsLabel}
                 </option>
               ))}
             </select>
 
-            <label className="block text-sm font-semibold text-gray-800">
+            <label className='block text-sm font-semibold text-gray-800'>
               {allGuestsLabel}
             </label>
             {guestNames.map((name, idx) => (
@@ -183,53 +185,60 @@ export default function RSVPSection() {
                 onChange={(e) => handleGuestChange(idx, e.target.value)}
                 placeholder={`${guestLabel} ${idx + 1} ${guestNamePlaceholder}`}
                 required
-                className="w-full px-4 py-3 border border-gray-300 bg-white text-sm mb-2"
+                className='w-full px-4 py-3 border border-gray-300 bg-white text-sm mb-2'
               />
             ))}
 
-            <label className="block text-sm font-semibold text-gray-800">
+            <label className='block text-sm font-semibold text-gray-800'>
               {dietaryLabel}
             </label>
             <textarea
-              name="dietary_requirements"
+              name='dietary_requirements'
               rows={4}
               onChange={handleTextareaChange}
               placeholder={dietaryPlaceholder}
-              className="w-full px-4 py-3 border border-gray-300 bg-white text-sm resize-none"
+              className='w-full px-4 py-3 border border-gray-300 bg-white text-sm resize-none'
             />
-            <div className="text-xs text-gray-500">{charCount}/500 {charactersLabel}</div>
+            <div className='text-xs text-gray-500'>
+              {charCount}/500 {charactersLabel}
+            </div>
 
             {/* Shuttle Bus Option */}
-            <label className="block text-sm font-semibold text-gray-800 mt-4">
+            <label className='block text-sm font-semibold text-gray-800 mt-4'>
               {shuttleQuestion}
             </label>
-            <p className="text-xs text-gray-500 mb-2">{shuttleInfo}</p>
-            <div className="flex gap-6 mb-4">
-              <label className="flex items-center gap-2">
-                <input type="radio" name="needs_bus" value="yes" />
+            <p className='text-xs text-gray-500 mb-2'>{shuttleInfo}</p>
+            <div className='flex gap-6 mb-4'>
+              <label className='flex items-center gap-2'>
+                <input type='radio' name='needs_bus' value='yes' />
                 {yesText}
               </label>
-              <label className="flex items-center gap-2">
-                <input type="radio" name="needs_bus" value="no" defaultChecked />
+              <label className='flex items-center gap-2'>
+                <input
+                  type='radio'
+                  name='needs_bus'
+                  value='no'
+                  defaultChecked
+                />
                 {noText}
               </label>
             </div>
 
             {submitStatus === "success" && (
-              <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3">
+              <div className='bg-green-50 border border-green-200 text-green-800 px-4 py-3'>
                 {successMessage}
               </div>
             )}
             {submitStatus === "error" && (
-              <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3">
+              <div className='bg-red-50 border border-red-200 text-red-800 px-4 py-3'>
                 {errorMessage}
               </div>
             )}
 
             <button
-              type="submit"
+              type='submit'
               disabled={isSubmitting}
-              className="w-full bg-[#7D2E3D] text-white py-4 font-semibold disabled:bg-gray-400"
+              className='w-fit bg-[#7D2E3D] hover:bg-[#5D1E2D] text-white p-4 font-semibold disabled:bg-gray-400'
             >
               {isSubmitting ? submittingText : submitText}
             </button>

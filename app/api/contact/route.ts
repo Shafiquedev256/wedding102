@@ -3,9 +3,9 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, phoneNumber, message } = await req.json();
 
-    if (!name || !email || !message) {
+    if (!name || !phoneNumber || !message) {
       return NextResponse.json(
         { error: "All fields are required" },
         { status: 400 },
@@ -29,14 +29,14 @@ export async function POST(req: NextRequest) {
     await transporter.verify();
 
     await transporter.sendMail({
-      from: `"Gemma&Jeﬄe wedding" <${email}>`,
+      from: `"Gemma&Jeele wedding" <${phoneNumber}>`,
       to: process.env.CONTACT_RECEIVER_EMAIL,
-      subject: `New Contact Message from Gemma & Jeﬄe wedding website`,
-      text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
+      subject: `New Contact Message from Gemma & Jeele wedding website`,
+      text: `Name: ${name}\nPhoneNumber: ${phoneNumber}\nMessage:\n${message}`,
       html: `
         <h3>New Contact Message</h3>
         <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>PhoneNumber:</strong> ${phoneNumber}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,

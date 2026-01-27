@@ -6,17 +6,17 @@ import { useTranslate } from "@/app/hooks/useTranslate";
 
 const ContactUsPage: React.FC = () => {
   // ✅ TRANSLATION HOOKS
-  const title = useTranslate("Get In Touch");
+  const title = "";
   const subtitle = useTranslate(
     "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
   );
 
   const nameLabel = useTranslate("Name");
-  const emailLabel = useTranslate("Email");
+  const PhoneNumberLabel = useTranslate("Phone Number");
   const messageLabel = useTranslate("Message");
 
   const namePlaceholder = useTranslate("Name...");
-  const emailPlaceholder = useTranslate("Email...");
+  const PhoneNumberPlaceholder = useTranslate("Phone Number...");
   const messagePlaceholder = useTranslate("Message...");
 
   const sendMessage = useTranslate("Send Message");
@@ -26,7 +26,7 @@ const ContactUsPage: React.FC = () => {
 
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    PhoneNumber: "",
     message: "",
   });
 
@@ -70,7 +70,7 @@ const ContactUsPage: React.FC = () => {
       if (!res.ok) throw new Error(data.error || "Something went wrong");
 
       setSuccessMessage(successText);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", PhoneNumber: "", message: "" });
     } catch (error: any) {
       setErrorMessage(error.message || "Failed to send message.");
     } finally {
@@ -119,14 +119,14 @@ const ContactUsPage: React.FC = () => {
                   htmlFor='email'
                   className='block text-[#FDF8F5] text-sm font-medium'
                 >
-                  {emailLabel}
+                  {PhoneNumberLabel}
                 </label>
                 <input
-                  placeholder={emailPlaceholder}
+                  placeholder={PhoneNumberPlaceholder}
                   type='email'
                   id='email'
                   name='email'
-                  value={formData.email}
+                  value={formData.PhoneNumber}
                   onChange={handleChange}
                   required
                   className='mt-1 block w-full p-3 border-gray-300 border bg-white focus:outline-none focus:ring-blue-500 focus:border-blue-500'
@@ -155,10 +155,10 @@ const ContactUsPage: React.FC = () => {
               <button
                 type='submit'
                 disabled={loading}
-                className={`w-full py-3 font-semibold text-white transition ${
+                className={`w-fit p-3 font-semibold text-white transition ${
                   loading
                     ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-[#7D2E3D] hover:bg-[#c52240]"
+                    : "bg-[#7D2E3D] hover:bg-[#5D1E2D]"
                 }`}
               >
                 {loading ? "Sending..." : sendMessage}

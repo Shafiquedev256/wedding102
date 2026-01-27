@@ -44,7 +44,7 @@ export default function RootLayout({
       <body
         className={`${cormorant_Garamond.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >
-       <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

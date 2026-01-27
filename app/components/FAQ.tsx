@@ -12,54 +12,49 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // ✅ ALL HOOKS CALLED AT TOP LEVEL
-  const title = useTranslate("Your Questions Answered");
+  const title = useTranslate("FAQs");
 
-  const q1 = useTranslate("Where are you registered?");
+  const q1 = useTranslate("Do you have a registry?");
   const a1 = useTranslate(
-    "Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we have registered at select stores for your convenience. For those who prefer to give monetary gifts, we have set up a honeymoon fund. You can also send gifts directly to our registry or bring cards to the reception. We are grateful for your love and generosity.",
+    "We don’t have a traditional registry. Your presence means the world to us, but for those who have asked about gifting, we’ve shared our bank details below. Any contributions will go toward our honeymoon and a lifetime of great memories.\n\nUK: Sort Code: 09-01-27 | Account Number: 08997431\nSpain: Account Number: 3472384028374",
   );
 
-  const q2 = useTranslate("What is the dress code?");
+  const q2 = useTranslate("What time should I arrive?");
   const a2 = useTranslate(
-    "Semi-formal attire. We suggest cocktail dresses and suits.",
+    "The ceremony will begin promptly at 5:00 PM. Guests are kindly asked to arrive no later than 4:30 PM to allow time for arrival and seating. Welcome drinks and snacks will be served upon arrival.",
   );
 
-  const q3 = useTranslate("Can I bring a plus one?");
+  const q3 = useTranslate("What’s the dress code?");
   const a3 = useTranslate(
-    "Due to limited capacity, we can only accommodate those listed on your invitation.",
+    "Our wedding will be a formal, black-tie celebration. We kindly request that guests dress accordingly and refrain from wearing casual attire.",
   );
 
-  const q4 = useTranslate("Will the ceremony be indoors or outdoors?");
+  const q4 = useTranslate("Are kids welcome?");
   const a4 = useTranslate(
-    "The ceremony will be outdoors in the garden, with an indoor backup plan in case of rain.",
+    "While we love your little ones, we’ve decided to make our wedding an adults-only celebration. We hope you understand and can arrange childcare so you can relax and enjoy the evening with us. We’re happy to help share local childcare options if needed.",
   );
 
-  const q5 = useTranslate("Are children welcome?");
+  const q5 = useTranslate("Can I bring a plus one?");
   const a5 = useTranslate(
-    "We love your little ones, but this will be an adults-only celebration.",
+    "We can only accommodate guests whose names are listed on the invitation. If your invitation includes a plus one, you’re welcome to bring a guest. Otherwise, we kindly ask that only the guests named on your invitation attend. Please reach out if you have any questions.",
   );
 
-  const q6 = useTranslate("What time should I arrive?");
+  const q6 = useTranslate("Is there parking available at the venue?");
   const a6 = useTranslate(
-    "Please arrive by 1:45 PM to be seated before the ceremony begins at 2:00 PM.",
+    "Yes, parking will be available at the venue for all guests.",
   );
 
-  const q7 = useTranslate("Is parking available at the venue?");
-  const a7 = useTranslate("Yes, complimentary parking is available on-site.");
-
-  const q8 = useTranslate("What if I have dietary restrictions?");
-  const a8 = useTranslate(
-    "Please let us know in your RSVP and we will accommodate your needs.",
+  const q7 = useTranslate("What if I have dietary restrictions?");
+  const a7 = useTranslate(
+    "Please include any dietary restrictions when you RSVP so we can accommodate you.",
   );
 
-  const q9 = useTranslate("Will there be an open bar?");
+  const q8 = useTranslate("When do I need to RSVP by?");
+  const a8 = useTranslate("Please RSVP no later than the 4th of May 2026.");
+
+  const q9 = useTranslate("Will there be transportation to the venue?");
   const a9 = useTranslate(
-    "Yes, we will have a full open bar throughout the reception.",
-  );
-
-  const q10 = useTranslate("Can I take photos during the ceremony?");
-  const a10 = useTranslate(
-    "We kindly ask for an unplugged ceremony. Our photographer will capture everything!",
+    "We’re currently exploring transportation options based on the number of guests confirmed. There may be a bus with pickup and drop-off from Terrassa and Barcelona. More details to come!",
   );
 
   const faqs: FAQ[] = [
@@ -72,7 +67,6 @@ export default function FAQSection() {
     { question: q7, answer: a7 },
     { question: q8, answer: a8 },
     { question: q9, answer: a9 },
-    { question: q10, answer: a10 },
   ];
 
   const toggleFAQ = (index: number) => {

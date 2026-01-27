@@ -58,7 +58,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
             href='/schedule'
             className='text-sm tracking-wider hover:text-[#7D2E3D] transition-colors'
           >
-            SCHEDULE
+            TIMELINE
           </Link>
           <Link
             href='/travel'
@@ -113,7 +113,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
               onClick={closeMenu}
               className='uppercase tracking-[2px] text-sm border-b border-gray-200 pb-2 text-[#3E2723]'
             >
-              SCHEDULE
+              TIMELINE
             </Link>
             <Link
               href='/travel'

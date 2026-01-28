@@ -116,20 +116,18 @@ export default function TravelStay() {
                   className='w-full h-full object-cover object-top rounded-t-sm'
                 />
 
-                {/* LEFT ARROW */}
                 <button
                   onClick={prevImage}
-                  className='absolute left-4 top-1/2 -translate-y-1/2 opacity-100 group-hover:opacity-100 bg-white/80 p-2 rounded-full z-10'
+                  className='absolute left-4 top-1/2 -translate-y-1/2 opacity-100 bg-white/80 p-2 rounded-full z-20'
                 >
-                  <i className='ri-arrow-left-s-line text-2xl' />
+                  <i className='ri-arrow-left-s-line text-2xl text-black' />
                 </button>
 
-                {/* RIGHT ARROW */}
                 <button
                   onClick={nextImage}
-                  className='absolute right-4 top-1/2 -translate-y-1/2 opacity-100 group-hover:opacity-100 bg-white/80 p-2 rounded-full z-10'
+                  className='absolute right-4 top-1/2 -translate-y-1/2 opacity-100 bg-white/80 p-2 rounded-full z-20'
                 >
-                  <i className='ri-arrow-right-s-line text-2xl' />
+                  <i className='ri-arrow-right-s-line text-2xl text-black' />
                 </button>
 
                 {/* Dots */}
@@ -162,15 +160,16 @@ export default function TravelStay() {
                     123 Lorimer St, New York, NY 11206
                   </span>
                 </div>
-
-                <a
-                  href='https://arlohotels.com/williamsburg/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='block w-fit bg-[#7D2E3D] text-white px-6 py-3 font-semibold hover:scale-105 transition-all'
-                >
-                  {visitHotel}
-                </a>
+                <div className=' mt-3 flex justify-center items-center'>
+                  <a
+                    href='https://arlohotels.com/williamsburg/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='block w-fit bg-[#7D2E3D] text-white px-6 py-3 font-semibold hover:scale-105 transition-all'
+                  >
+                    {visitHotel}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -185,7 +184,7 @@ export default function TravelStay() {
 
         <div className='max-w-3xl mx-auto mb-16'>
           <div className='space-y-6 p-6'>
-            <div className='flex justify-between items-center border-b border-gray-300 pb-4'>
+            <div className='flex justify-between items-center  pb-4'>
               <div>
                 <p className='text-sm font-bold'>{fromManhattan}</p>
                 <p className='text-sm text-gray-700'>
@@ -199,7 +198,7 @@ export default function TravelStay() {
                 href='https://www.google.com/maps/dir//New+York,+NY'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='bg-[#7D2E3D] text-white p-2 flex gap-2'
+                className='bg-[#7D2E3D] text-white p-2 flex gap-2 whitespace-nowrap'
               >
                 <i className='ri-map-pin-line' />
                 {openMaps}
@@ -220,7 +219,7 @@ export default function TravelStay() {
                 href='https://www.google.com/maps/dir//New+York,+NY'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='bg-[#7D2E3D] text-white p-2 flex gap-2'
+                className='bg-[#7D2E3D] text-white p-2 flex gap-2 whitespace-nowrap'
               >
                 <i className='ri-map-pin-line' />
                 {openMaps}

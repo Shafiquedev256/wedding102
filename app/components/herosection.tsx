@@ -81,7 +81,7 @@ export default function Hero() {
                   scrolled ? "text-[#7D2E3D]" : "text-white"
                 } transition-colors`}
               >
-                SCHEDULE
+                TIMELINE
               </Link>
               <Link
                 href='/travel'
@@ -146,7 +146,7 @@ export default function Hero() {
                   onClick={closeMenu}
                   className='uppercase tracking-[2px] text-sm border-b border-gray-200 pb-2 text-[#3E2723]'
                 >
-                  SCHEDULE
+                  TIMELINE
                 </Link>
                 <Link
                   href='/travel'

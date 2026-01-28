@@ -234,14 +234,15 @@ export default function RSVPSection() {
                 {errorMessage}
               </div>
             )}
-
-            <button
-              type='submit'
-              disabled={isSubmitting}
-              className='w-fit bg-[#7D2E3D] hover:bg-[#5D1E2D] text-white p-4 font-semibold disabled:bg-gray-400'
-            >
-              {isSubmitting ? submittingText : submitText}
-            </button>
+            <div className='flex justify-center items-center'>
+              <button
+                type='submit'
+                disabled={isSubmitting}
+                className='w-fit bg-[#7D2E3D] hover:bg-[#5D1E2D] text-white px-4 p-2 font-semibold disabled:bg-gray-400'
+              >
+                {isSubmitting ? submittingText : submitText}
+              </button>
+            </div>
           </div>
         </form>
       </div>

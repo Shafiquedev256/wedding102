@@ -151,18 +151,19 @@ const ContactUsPage: React.FC = () => {
                   className='mt-1 block w-full p-3 border border-gray-300 bg-white focus:outline-none focus:ring-blue-500 focus:border-blue-500'
                 />
               </div>
-
-              <button
-                type='submit'
-                disabled={loading}
-                className={`w-fit p-3 font-semibold text-white transition ${
-                  loading
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-[#7D2E3D] hover:bg-[#5D1E2D]"
-                }`}
-              >
-                {loading ? "Sending..." : sendMessage}
-              </button>
+              <div className='justify-center items-center flex'>
+                <button
+                  type='submit'
+                  disabled={loading}
+                  className={`w-fit p-3 font-semibold text-white transition ${
+                    loading
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-[#7D2E3D] hover:bg-[#5D1E2D]"
+                  }`}
+                >
+                  {loading ? "Sending..." : sendMessage}
+                </button>
+              </div>
 
               {successMessage && (
                 <p className='text-green-600 text-sm mt-2'>{successMessage}</p>

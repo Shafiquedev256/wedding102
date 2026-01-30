@@ -88,7 +88,7 @@ export default function Schedule() {
       id='details'
       className=' min-h-screen md:py-24 px-4 w-full overflow-x-hidden bg-[#FDF8F5]'
     >
-      <div className='max-w-4xl mx-auto'>
+      <div className='max-w-4xl mx-auto mt-14 md:mt-2'>
         <div className='text-center mb-12 md:mb-16'>
           <h2 className='text-lg md:text-4xl font-serif text-gray-900 mb-6 md:mb-12 pt-10'>
             {title}

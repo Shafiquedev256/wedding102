@@ -74,10 +74,10 @@ export default function FAQSection() {
   };
 
   return (
-    <section id='faq' className='py-16 px-2 md:px-6 bg-[#FDF8F5] min-h-screen'>
+    <section id='faq' className=' px-2 md:px-6 bg-[#FDF8F5] min-h-screen'>
       <div className='px-3 md:max-w-3xl md:mx-auto'>
         <div className='rounded-2xl md:p-12 md:pt-2'>
-          <h2 className='text-lg md:text-4xl font-serif text-gray-900 mb-3 md:mb-6 pt-20 text-center'>
+          <h2 className='text-lg md:text-4xl pt-24 font-serif text-gray-900 mb-3 md:mb-6  text-center'>
             {title}
           </h2>
 

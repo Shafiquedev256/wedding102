@@ -82,12 +82,12 @@ export default function TravelStay() {
   return (
     <section
       id='travel'
-      className='py-24 px-3 pt-44 w-full overflow-hidden bg-[#FDF8F5]'
+      className='py-24 px-3 w-full overflow-hidden bg-[#FDF8F5]'
     >
       <div className='max-w-6xl mx-auto'>
         {/* Heading */}
         <div className='text-center mb-4'>
-          <h2 className='text-lg md:text-4xl font-serif text-gray-900'>
+          <h2 className='md:mt-6 text-lg md:text-4xl font-serif text-gray-900'>
             {heading}
           </h2>
         </div>
